@@ -170,12 +170,15 @@ def get_europe_tickers():
 
 def get_all_tickers():
     """获取所有市场的 ticker"""
+    fast_mode = os.environ.get("STOCK_FAST_MODE", "").lower() in ("1", "true", "yes")
+
     all_tickers = []
     all_tickers.extend(get_sp500_tickers())
-    all_tickers.extend(get_hk_tickers())
-    all_tickers.extend(get_a_share_tickers())
-    all_tickers.extend(get_japan_tickers())
-    all_tickers.extend(get_europe_tickers())
+    if not fast_mode:
+        all_tickers.extend(get_hk_tickers())
+        all_tickers.extend(get_a_share_tickers())
+        all_tickers.extend(get_japan_tickers())
+        all_tickers.extend(get_europe_tickers())
     # 去重
     seen = set()
     unique = []
@@ -183,6 +186,11 @@ def get_all_tickers():
         if t not in seen:
             seen.add(t)
             unique.append(t)
+
+    if fast_mode and len(unique) > 80:
+        log.info(f"快速模式: 从 {len(unique)} 个缩减到前 80 个核心 ticker")
+        unique = unique[:80]
+
     log.info(f"总计 {len(unique)} 个 ticker 待筛选")
     return unique
 
