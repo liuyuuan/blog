@@ -27,7 +27,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Fetch papers
-        run: python scripts/fetch_papers.py
+        run: python scripts/fetch_papers.py --no-pdf
 
       - name: Generate report
         run: python scripts/generate_report.py
