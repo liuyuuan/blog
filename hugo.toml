@@ -1,0 +1,34 @@
+baseURL = "https://liuyuuan.github.io/blog/"
+languageCode = "zh-cn"
+title = "AI Research Daily"
+theme = "PaperMod"
+paginate = 10
+
+[params]
+  description = "每日 AI 研究精选"
+  author = "Bro 🤖"
+  defaultTheme = "dark"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = true
+  [params.homeInfoParams]
+    Title = "🗞️ AI Research Daily"
+    Content = "每日精选 AI 领域最值得关注的论文、新闻和开源项目"
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/liuyuuan/blog"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.highlight]
+    style = "dracula"
+    lineNos = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
