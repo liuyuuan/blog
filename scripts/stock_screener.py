@@ -232,8 +232,18 @@ def get_financials(ticker_obj):
     data["fifty_two_week_high"] = info.get("fiftyTwoWeekHigh", 0)
     data["fifty_two_week_low"] = info.get("fiftyTwoWeekLow", 0)
     data["insider_pct"] = info.get("heldPercentInsiders", 0) or 0
-    data["dividend_yield"] = info.get("dividendYield", 0) or 0
-    data["payout_ratio"] = info.get("payoutRatio", 0) or 0
+
+    # ── dividend_yield 单位修正 ──
+    # yfinance >=1.2 可能返回百分比数值（4.25 表示 4.25%）而非小数（0.0425）
+    raw_div = info.get("dividendYield", 0) or 0
+    if raw_div > 1:          # 大于 1 说明已经是百分比形式
+        raw_div = raw_div / 100.0
+    data["dividend_yield"] = raw_div  # 统一存储为小数（0.0425 = 4.25%）
+
+    raw_payout = info.get("payoutRatio", 0) or 0
+    if raw_payout > 5:       # payoutRatio 也可能被返回成百分比
+        raw_payout = raw_payout / 100.0
+    data["payout_ratio"] = raw_payout
 
     # 获取年度财务报表
     try:
@@ -296,10 +306,11 @@ def first_round_screen(ticker_str):
         if not market_cap or market_cap < MIN_MARKET_CAP:
             return False, {"reason": f"市值不足 ({market_cap:.0f})" if market_cap else "无市值数据"}
 
-        # P/B 检查
+        # P/B 检查 — 负 P/B 通常意味着负股东权益（大量回购），不一定是坏事
         pb = data.get("pb_ratio")
-        if pb is not None and pb > MAX_PB:
+        if pb is not None and pb > 0 and pb > MAX_PB:
             return False, {"reason": f"P/B ({pb:.1f}) > {MAX_PB}"}
+        # pb < 0 → 负股东权益，放过（后续用 ROE 和其他指标判断）
 
         # P/E 检查 — 排除亏损
         pe = data.get("pe_ratio")
@@ -310,6 +321,7 @@ def first_round_screen(ticker_str):
         income = data.get("income_stmt")
         balance = data.get("balance_sheet")
         roe_values = []
+        negative_equity = False
         if income is not None and balance is not None:
             net_incomes = extract_annual_values(income, ["Net Income", "Net Income Common Stockholders"])
             equities = extract_annual_values(balance, ["Stockholders Equity", "Total Stockholder Equity",
@@ -318,9 +330,23 @@ def first_round_screen(ticker_str):
                 for ni, eq in zip(net_incomes, equities):
                     if eq and eq > 0:
                         roe_values.append(ni / eq)
+                    elif eq and eq < 0 and ni > 0:
+                        # 负股东权益（如大量回购）但盈利为正 → 标记但不排除
+                        negative_equity = True
 
+        # 如果权益为负但公司盈利，使用 yfinance 的 returnOnEquity 作为备选
+        if not roe_values and negative_equity:
+            info_roe = data.get("info", {}).get("returnOnEquity")
+            if info_roe is not None:
+                # yfinance returnOnEquity 可能是小数或百分比
+                if abs(info_roe) > 5:
+                    info_roe = info_roe / 100.0
+                roe_values = [info_roe] * 3  # 近似当作3年数据
+
+        # 对于因大量回购导致负权益的公司（MO、BKNG），如果有正的净利润则放宽 ROE 要求
         avg_roe = np.mean(roe_values) if roe_values else 0
-        if avg_roe < MIN_ROE_5Y and len(roe_values) >= 2:
+        data["negative_equity"] = negative_equity
+        if avg_roe < MIN_ROE_5Y and len(roe_values) >= 2 and not negative_equity:
             return False, {"reason": f"平均ROE ({avg_roe:.1%}) < {MIN_ROE_5Y:.0%}"}
 
         # 连续盈利检查
@@ -919,6 +945,7 @@ def run_screening():
             "owner_earnings": item["analysis"].get("owner_earnings"),
             "insider_pct": item["data"].get("insider_pct", 0),
             "dividend_yield": item["data"].get("dividend_yield", 0),
+            "negative_equity": item["data"].get("negative_equity", False),
             "fifty_two_week_high": item["data"].get("fifty_two_week_high", 0),
             "fifty_two_week_low": item["data"].get("fifty_two_week_low", 0),
             "scores": {k: round(v, 1) for k, v in scores.items()},
@@ -936,6 +963,16 @@ def run_screening():
                 "intrinsic_per_share": round(dcf.get("intrinsic_per_share", 0), 2),
                 "beta": round(dcf.get("beta", 1.0), 2),
             }
+
+        # ── Sanity checks ──
+        div_y = entry["dividend_yield"]
+        if div_y is not None and div_y > 0.20:
+            log.warning(f"  ⚠ {ticker_str} 股息率异常 ({div_y:.1%})，标记为待核实")
+            entry["dividend_yield_warning"] = True
+
+        if entry["avg_roe"] is not None and entry["avg_roe"] > 2.0:
+            log.warning(f"  ⚠ {ticker_str} ROE 异常 ({entry['avg_roe']:.1%})，可能因负权益")
+            entry["roe_warning"] = True
 
         scored_stocks.append(entry)
 
