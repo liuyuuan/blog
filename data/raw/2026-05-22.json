@@ -1,0 +1,1030 @@
+{
+  "date": "2026-05-22",
+  "fetched_at": "2026-05-22T02:38:58.548285+00:00",
+  "papers": [
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Which Way Did It Move? Diagnosing and Overcoming Directional Motion Blindness in Video-LLMs",
+      "url": "https://arxiv.org/abs/2605.22823v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.22823v1",
+      "arxiv_id": "2605.22823",
+      "authors": [
+        "Jongseo Lee",
+        "Hyuntak Lee",
+        "Sunghun Kim",
+        "Sooa Kim",
+        "Jihoon Chung",
+        "Jinwoo Choi"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV",
+      "summary": "Video Large Language Models (Video-LLMs) have made rapid progress on temporal video understanding, yet many fail at a basic perceptual primitive: signed image-plane motion direction. On simple videos of a single object moving left, right, up, or down, most Video-LLMs perform near chance, with above-chance cases largely attributable to prediction biases rather than genuine direction understanding. We call this failure directional motion blindness. We localize the failure by tracing motion direction information through the Video-LLM pipeline. Motion direction remains linearly accessible from the vision encoder, projector, and LLM hidden states, but the readout fails to bind this signal to the correct verbal answer option, revealing a direction binding gap. Although synthetic motion direction instruction tuning reduces this gap on the source domain, motion direction concept vector analysis shows that visual complexity weakens the signal magnitude and limits out-of-domain generalization. We introduce MoDirect, a dataset family for motion direction instruction tuning and evaluation, and DeltaDirect, a diagnosis-driven, projector-level objective that predicts normalized 2-D motion vectors from adjacent-frame feature deltas. On MoDirect-SynBench, instruction tuning with DeltaDirect improves motion direction accuracy from 25.9% to 85.4%. On MoDirect-RealBench, DeltaDirect improves real-world motion direction accuracy by 21.9 points over the vanilla baseline without real-world tuning data, while preserving standard video-understanding performance. Code: https://github.com/KHU-VLL/DeltaDirect",
+      "published": "2026-05-21T17:59:56Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Cambrian-P: Pose-Grounded Video Understanding",
+      "url": "https://arxiv.org/abs/2605.22819v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.22819v1",
+      "arxiv_id": "2605.22819",
+      "authors": [
+        "Jihan Yang",
+        "Zifan Zhao",
+        "Xichen Pan",
+        "Shusheng Yang",
+        "Junyi Zhang",
+        "Bingyi Kang",
+        "Hu Xu",
+        "Saining Xie"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV",
+      "summary": "Camera pose matters. The position and orientation of each viewpoint define a shared spatial coordinate frame that relates observations across video frames. Yet this signal is largely absent from multimodal LLMs (MLLMs) for video understanding, which process frames as isolated 2D snapshots, instead of the persistent scene humans perceive. We revisit pose as a lightweight supervisory signal and introduce Cambrian-P, a video MLLM augmented with per-frame learnable camera tokens and a pose regression head. With a carefully designed sampling scheme, the model achieves substantial gains of 4.5-6.5% on spatial reasoning benchmarks such as VSI-Bench, generalizes across eight additional spatial and general video QA benchmarks, and, as a byproduct, achieves state of the art streaming pose estimation on ScanNet. Surprisingly, training on pseudo-annotated poses from in-the-wild video further improves general video QA benchmarks, showing pose helps beyond spatial reasoning. Together, these results position camera pose as a fundamental signal for video models that reason about the physical world.",
+      "published": "2026-05-21T17:59:45Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "MotiMotion: Motion-Controlled Video Generation with Visual Reasoning",
+      "url": "https://arxiv.org/abs/2605.22818v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.22818v1",
+      "arxiv_id": "2605.22818",
+      "authors": [
+        "Lee Hsin-Ying",
+        "Hanwen Jiang",
+        "Yiqun Mei",
+        "Jing Shi",
+        "Ming-Hsuan Yang",
+        "Zhixin Shu"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV",
+      "summary": "Current motion-controlled image-to-video generation models rigidly follow user-provided trajectories that are often sparse, imprecise, and causally incomplete. Such reliance often yields unnatural or implausible outcomes, especially by missing secondary causal consequences. To address this, we introduce MotiMotion, a novel framework that reformulates motion control as a reasoning-then-generation problem. To encourage causally grounded and commonsense-consistent interactions, we leverage a training-free vision-language reasoner to refine image-space coordinates of primary trajectories and to hallucinate plausible secondary motions. To further improve motion naturalness, we propose a confidence-aware control scheme that modulates guidance strength, enabling the model to closely follow high-confidence plans while correcting artifacts under low-confidence inputs with its internal generative priors. To support systematic evaluation, we curate a new image-to-video benchmark, MotiBench, consisting of interaction-centric scenes where new events are triggered by motion. Both VLM-based evaluation and a human study on MotiBench demonstrate that MotiMotion produces videos with more plausible object behaviors and interaction, and is preferred over existing approaches.",
+      "published": "2026-05-21T17:59:36Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "AwareVLN: Reasoning with Self-awareness for Vision-Language Navigation",
+      "url": "https://arxiv.org/abs/2605.22816v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.22816v1",
+      "arxiv_id": "2605.22816",
+      "authors": [
+        "Wenxuan Guo",
+        "Xiuwei Xu",
+        "Yichen Liu",
+        "Xiangyu Li",
+        "Hang Yin",
+        "Huangxing Chen",
+        "Wenzhao Zheng",
+        "Jianjiang Feng",
+        "Jie Zhou",
+        "Jiwen Lu"
+      ],
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV",
+      "summary": "Vision-and-Language Navigation (VLN) requires an agent to ground language instructions to its own movement within a visual environment. While state-of-the-art methods leverage the reasoning capabilities of Vision-Language Models (VLMs) for end-to-end action prediction, they often lack an explicit and explainable understanding of the relationships between the agent, the instruction, and the scene. Conversely, explicitly building a scene map for heuristic planning is intuitively appealing but relies on additional 3D sensors and hinders large-scale vision-language pre-training. To bridge this gap, we propose AwareVLN, a novel framework that equips the navigation model with a self-aware reasoning mechanism, enabling it to understand the agent's state and task progress in a fully end-to-end and data-driven manner. Our approach features two key innovations: (1) a structural reasoning module that fosters spatial and task-oriented self-awareness, and (2) an automatic data engine with progress division for effective training. Extensive experiments on various datasets in Habitat simulator show our AwareVLN significantly outperforms previous state-of-the-art vision-language navigation methods. Project page: https://gwxuan.github.io/AwareVLN/.",
+      "published": "2026-05-21T17:58:26Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "GesVLA: Gesture-Aware Vision-Language-Action Model Embedded Representations",
+      "url": "https://arxiv.org/abs/2605.22812v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.22812v1",
+      "arxiv_id": "2605.22812",
+      "authors": [
+        "Wenxuan Guo",
+        "Ziyuan Li",
+        "Meng Zhang",
+        "Yichen Liu",
+        "Yimeng Dong",
+        "Chuxi Xu",
+        "Yunfei Wei",
+        "Ze Chen",
+        "Erjin Zhou",
+        "Jianjiang Feng"
+      ],
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV",
+      "summary": "Vision-Language-Action (VLA) models have shown strong potential for general-purpose robot manipulation by unifying perception and action. However, existing VLA systems primarily rely on textual instructions and struggle to resolve spatial ambiguity in complex scenes with multiple similar objects. To address this limitation, we introduce gesture as a parallel instruction modality and propose a Gesture-aware Vision-Language-Action model (GesVLA). Our approach encodes gesture features directly into the latent space, enabling them to participate in both high-level reasoning and low-level action generation, and adopts a dual-VLM architecture to achieve tight coupling between gesture representations and action policies. At the data level, we construct a scalable gesture data generation pipeline by rendering hand models onto real-world scene images. This reduces the sim-to-real visual gap while producing rich data with diverse motion patterns and corresponding pointing annotations. In addition, we employ a two-stage training strategy to equip the model with both gesture perception and action prediction capabilities. We evaluate our approach on multiple real-world robotic tasks, including a controlled block manipulation task for validation and more practical scenarios such as product and produce selection. Experimental results show that incorporating gesture consistently improves target grounding accuracy and human-robot interaction efficiency, especially in complex and cluttered environments. Project page: https://gwxuan.github.io/GesVLA/.",
+      "published": "2026-05-21T17:57:44Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Sensor2Sensor: Cross-Embodiment Sensor Conversion for Autonomous Driving",
+      "url": "https://arxiv.org/abs/2605.22809v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.22809v1",
+      "arxiv_id": "2605.22809",
+      "authors": [
+        "Jiahao Wang",
+        "Bo Sun",
+        "Yijing Bai",
+        "Vincent Casser",
+        "Songyou Peng",
+        "Zehao Zhu",
+        "Meng-Li Shih",
+        "Xander Masotto",
+        "Shih-Yang Su",
+        "Kanaad V Parvate",
+        "Tiancheng Ge",
+        "Linn Bieske",
+        "Dragomir Anguelov",
+        "Mingxing Tan",
+        "Chiyu Max Jiang"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV",
+      "summary": "Robust training and validation of Autonomous Driving Systems (ADS) require massive, diverse datasets. Proprietary data collected by Autonomous Vehicle (AV) fleets, while high-fidelity, are limited in scale, diversity of sensor configurations, as well as geographic and long-tail-behavioral coverage. In contrast, in-the-wild data from sources like dashcams offers immense scale and diversity, capturing critical long-tail scenarios and novel environments. However, this unstructured, in-the-wild video data is incompatible with ADS expecting structured, multi-modal sensor inputs for validation and training. To bridge this data gap, we propose Sensor2Sensor, a novel generative modeling paradigm that translates in-the-wild monocular dashcam videos into a high-fidelity, multi-modal sensor suite (AV logs) comprising multi-view camera images and LiDAR point clouds. A core challenge is the lack of paired training data. We address this by converting real AV logs into dashcam-style videos via 4D Gaussian Splatting (4DGS) reconstruction and novel-view rendering. Sensor2Sensor then utilizes a diffusion architecture to perform the generative conversion. We perform comprehensive quantitative evaluations on the fidelity and realism of the generated sensor data. We demonstrate Sensor2Sensor's practical utility by converting challenging in-the-wild internet and dashcam footage into realistic, multi-modal data formats, further unlocking vast external data sources for AV development.",
+      "published": "2026-05-21T17:57:17Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "DecQ: Detail-Condensing Queries for Enhanced Reconstruction and Generation in Representation Autoencoders",
+      "url": "https://arxiv.org/abs/2605.22777v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.22777v1",
+      "arxiv_id": "2605.22777",
+      "authors": [
+        "Tianhang Wang",
+        "Yitong Chen",
+        "Wei Song",
+        "Zuxuan Wu",
+        "Min Li",
+        "Jiaqi Wang"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV",
+      "summary": "Representation Autoencoders (RAEs) leverage frozen vision foundation models (VFMs) as tokenizer encoders, providing robust high-level representations that facilitate fast convergence and high-quality generation in latent diffusion models. However, freezing the VFM inherently constrains its spatial reconstruction capacity, limiting fine-grained generation and image editing; in contrast, incorporating reconstruction-oriented signals via fine-tuning disrupts the pretrained semantic space and degrades generative fidelity. To address this trade-off, we propose DecQ, a simple yet effective framework for RAEs. Specifically, DecQ introduces lightweight detail-condensing queries that extract fine-grained information from intermediate VFM features through condenser modules. These queries are incorporated into the decoder to support reconstruction and are jointly generated with patch tokens during generative modeling. By aggregating information from both shallow and deep layers, DecQ effectively mitigates the reconstruction--generation trade-off, improving both reconstruction quality and generative performance. Our experiments demonstrate that: (1) with only 8 additional queries and 3.9% extra computation, DecQ improves reconstruction over the frozen DINOv2-based RAE, increasing PSNR from 19.13 dB to 22.76 dB; and (2) for generative modeling, DecQ achieves 3.3$\\times$ faster convergence than RAE, attaining an FID of 1.41 without guidance and 1.05 with guidance.",
+      "published": "2026-05-21T17:34:04Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Synthetic Data Alone is Enough? Rethinking Data Scarcity in Pediatric Rare Disease Recognition",
+      "url": "https://arxiv.org/abs/2605.22767v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.22767v1",
+      "arxiv_id": "2605.22767",
+      "authors": [
+        "Ganlin Feng",
+        "Yuxi Long",
+        "Erin Lou",
+        "Lianghong Chen",
+        "Zihao Jing",
+        "Pingzhao Hu",
+        "Wei Xu"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV",
+      "summary": "Children with rare genetic diseases often exhibit distinctive facial phenotypes, yet developing computer vision systems for early diagnosis remains challenging due to extreme data scarcity, privacy constraints, and limited data sharing in pediatric settings. These challenges not only hinder automated diagnosis but also restrict the availability of visual resources for clinical genetic counseling. While prior work has shown that synthetic data can augment real datasets and preserve phenotype-level semantics, it remains unclear whether synthetic data alone is sufficient for learning in ultra-low-resource pediatric settings. In this work, we study the synthetic-only regime for pediatric rare disease recognition. Under a controlled experimental setup, models are trained exclusively on phenotype-aware synthetic facial images at increasing scales. We find that synthetic-only training achieves performance comparable to real-data-only baselines at sufficient scale across multiple backbones, suggesting that high-fidelity synthetic data can approximate clinically meaningful distributions. These findings together further enable the use of synthetic pediatric facial images as privacy-preserving resources for genetic education and counseling, supporting clinician training and patient communication. Our results highlight the potential of computer vision to improve data efficiency and expand accessible visual tools in children's healthcare.",
+      "published": "2026-05-21T17:28:11Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Spectral Tail Auxiliary Learning for AI-Generated Image Detection",
+      "url": "https://arxiv.org/abs/2605.22751v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.22751v1",
+      "arxiv_id": "2605.22751",
+      "authors": [
+        "Xingyi Li",
+        "Jiahui Zhang",
+        "Yiheng Li",
+        "Yun Cao",
+        "Wenhao Wang"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV",
+      "summary": "As generative image models evolve rapidly, the perceptual gap between generated and real images continues to narrow, making AI-generated image detection increasingly challenging. Many existing methods exploit frequency-domain cues for detection, typically described as frequency-domain artifacts or high-frequency discrepancies. However, the specific and recurring spectral regularities remain insufficiently understood and characterized. In this paper, we systematically analyze the one-dimensional radial log-power spectra of real and generated images. We find that generated images do not necessarily exhibit higher or lower energy across the entire spectrum or high-band range. Instead, their spectra deviate from the power-law decay and show an anomalous uplift in the ultra-high-frequency tail. We term this phenomenon spectral tail uplift. We further attribute this phenomenon to nonlinear harmonic accumulation in trained generative models, suggesting that it can serve as a structural cue across generative architectures. Based on this observation, we propose Spectral Tail Auxiliary Learning (STAL), a frequency-domain auxiliary supervision framework for generalizable AI-generated image detection. STAL transfers spectral-tail cues from a tail-aware frequency teacher to a spatial detector during training, while all frequency-domain modules are discarded at inference time. Consequently, STAL introduces no inference overhead. Extensive experiments on 9 public datasets show that STAL achieves strong generalization and stability across generators, data distributions, and real-world scenarios.",
+      "published": "2026-05-21T17:20:59Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "WorldKV: Efficient World Memory with World Retrieval and Compression",
+      "url": "https://arxiv.org/abs/2605.22718v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.22718v1",
+      "arxiv_id": "2605.22718",
+      "authors": [
+        "Jung Yi",
+        "Minjae Kim",
+        "Paul Hyunbin Cho",
+        "Wooseok Jang",
+        "Sangdoo Yun",
+        "Seungryong Kim"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV",
+      "summary": "Autoregressive video diffusion models have enabled real-time, action-conditioned world generation. However, sustaining a persistent world, where revisiting a previously seen viewpoint yields consistent content, remains an open problem. Full KV-cache attention preserves this consistency but breaks real-time constraints: memory footprint and attention cost grow linearly with rollout length. Sliding window inference restores throughput but discards long-term consistency. We propose WorldKV, a training-free framework with two components: World Retrieval and World Compression. World Retrieval stores evicted KV-cache chunks in GPU/CPU memory and selectively retrieves scene-relevant chunks via camera/ action correspondence, inserting them back into the native attention window without re-encoding. World Compression prunes redundant tokens within each chunk via key-key similarity to an anchor frame, halving per-chunk storage to fit 2x more history under a fixed budget. On Matrix-Game-2.0 and LingBot- World-Fast, WorldKV matches or exceeds full-KV memory fidelity at roughly 2x the throughput, and is competitive with memory-trained baselines without any fine-tuning. Project Page: https://cvlab-kaist.github.io/WorldKV/",
+      "published": "2026-05-21T16:55:04Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "AnyMo: Geometry-Aware Setup-Agnostic Modeling of Human Motion in the Wild",
+      "url": "https://arxiv.org/abs/2605.22715v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.22715v1",
+      "arxiv_id": "2605.22715",
+      "authors": [
+        "Baiyu Chen",
+        "Zechen Li",
+        "Wilson Wongso",
+        "Lihuan Li",
+        "Xiachong Lin",
+        "Hao Xue",
+        "Benjamin Tag",
+        "Flora Salim"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL",
+        "cs.HC"
+      ],
+      "primary_category": "cs.CV",
+      "summary": "As wearable and mobile devices become increasingly embedded in daily life, they offer a practical way to continuously sense human motion in the wild. But inertial signals are highly dependent on the sensing setup, including body location, mounting position, sensor orientation, device hardware, and sampling protocol. This setup dependence makes it difficult to learn motion representations that transfer across devices and datasets, and limits the broader use of wearable IMUs beyond closed-set recognition. We introduce AnyMo, a geometry-aware framework for setup-agnostic human motion modeling. AnyMo uses physics-grounded IMU simulation over dense body-surface placements to generate diverse and plausible synthetic signals, pre-trains a graph encoder from paired synthetic placement views and masked partial observations, tokenizes multi-position IMU into full-body motion tokens, and aligns these tokens with an LLM for motion-language understanding. We evaluate AnyMo on three complementary tasks: zero-shot activity recognition across 14 unseen downstream datasets, cross-modal retrieval, and wearable IMU motion captioning, where it improves average Accuracy/F1/R@2 by 11.7\\%/11.6\\%/22.6\\% on HAR, increases zero-shot IMU-to-text and text-to-IMU retrieval MRR by 15.9\\% and 28.6\\%, respectively, and improves zero-shot captioning BERT-F1 by 18.8\\%. These results support AnyMo as a generalist model for wearable motion understanding in the wild. Project page: https://baiyuchen.com/project/AnyMo.",
+      "published": "2026-05-21T16:52:10Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Cross-Domain Human Action Recognition from Multiview Motion and Textual Descriptions",
+      "url": "https://arxiv.org/abs/2605.22697v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.22697v1",
+      "arxiv_id": "2605.22697",
+      "authors": [
+        "Yannick Porto",
+        "Renato Martins",
+        "Thomas Chalumeau",
+        "Cedric Demonceaux"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV",
+      "summary": "Robustness to domain changes is a key capability for effective deployment of human action recognition systems in real-world scenarios, where action categories at inference can present important domain shifts or even unseen actions from training. In this context, improving the recognition capabilities of Zero-Shot Action Recognition models (ZSAR), without requiring strong annotation efforts, remains a central challenge. Most ZSAR approaches assume that actions are observed under geometric conditions similar to those seen during training. In practice, variations in human body orientation and camera viewpoint add a significant domain gap in ZSAR, substantially limiting generalization to novel action-motion combinations. In this context, this paper presents a novel orientation-aware action recognition approach with improved cross-domain capabilities. Our approach combines motion cues of multiple camera viewpoints and text descriptions of human actions in the training phase. We present a new orientation-aware motion encoding network to learn different motion features, and adapt a specific orientation-aware text prompt to match the corresponding features at inference. Extensive experiments demonstrate that the proposed method consistently improves ZSAR performance across different recognition benchmarks, outperforming recent state-of-the-art zero-shot approaches on NTU-RGB+D, BABEL, NW-UCLA, and on two surveillance datasets. In addition, the learned representations exhibit strong transfer learning capabilities, yielding competitive performance on both cross-domain and same-domain recognition of seen actions. Code and trained models are available at: https://icb-vision-ai.github.io/OrientationAware-HAR",
+      "published": "2026-05-21T16:39:58Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Improving Viewpoint-Invariance and Temporal Consistency for Action Detection",
+      "url": "https://arxiv.org/abs/2605.22695v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.22695v1",
+      "arxiv_id": "2605.22695",
+      "authors": [
+        "Yannick Porto",
+        "Renato Martins",
+        "Thomas Chalumeau",
+        "Cedric Demonceaux"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV",
+      "summary": "Viewpoint change invariance and action temporal consistency are critical aspects for the effective deployment of human action detection of untrimmed videos. Existing appearance-based video detection methods often struggle with limited viewpoint diversity during training, while motion-based detection approaches frequently fail to model fine-grained temporal relationships across consecutive motion windows. This paper introduces a novel two-stage action detection approach designed to improve both view-invariance and global temporal coherence properties. In the first stage, we extract motion features from augmented virtual viewpoints, solely used at training. Then, the second stage introduces a new view-invariant, multi-scale temporal encoder based on selective state-space sequence modelling to aggregate information across viewpoints and time scales. Experiments on PKU-MMD and BABEL benchmarks demonstrate that this approach significantly outperforms state-of-the-art methods in all considered splits. Code and trained models are available at: https://icb-vision-ai.github.io/HydraView-TAD",
+      "published": "2026-05-21T16:38:21Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Conceptualizing Embeddings: Sparse Disentanglement for Vision-Language Models",
+      "url": "https://arxiv.org/abs/2605.22679v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.22679v1",
+      "arxiv_id": "2605.22679",
+      "authors": [
+        "Piotr Kubaty",
+        "Patryk Marszałek",
+        "Łukasz Struski",
+        "Adam Wróbel",
+        "Jacek Tabor",
+        "Marek Śmieja"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CV",
+      "summary": "Vision-language models learn powerful multimodal embeddings, yet their internal semantics remain opaque. While sparse autoencoders (SAEs) can extract interpretable features, they rely on expanding the representation dimension, which compromises the original geometry and introduces redundancy. We introduce CEDAR (Conceptual Embedding Disentanglement via Adaptive Rotation), a post-hoc method that reveals the compositional structure of pretrained embeddings without increasing dimensionality. By learning an invertible transformation with a top-$k$ sparsity bottleneck, CEDAR concentrates semantic information into axis-aligned disentangled coordinates. In CLIP-like architecture, individual coordinates can be interpreted with textual concepts, while for generative models such as BLIP, they can be decoded into natural language descriptions. Experiments demonstrate that CEDAR achieves a competitive reconstruction-sparsity trade-off while producing explanations that are more interpretable and better aligned with human perception. Our results suggest that the apparent entanglement in vision-language representations can be resolved through a suitable change of basis, eliminating the need for overcomplete expansions.",
+      "published": "2026-05-21T16:23:34Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Swift Sampling: Selecting Temporal Surprises via Taylor Series",
+      "url": "https://arxiv.org/abs/2605.22678v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.22678v1",
+      "arxiv_id": "2605.22678",
+      "authors": [
+        "Dahye Kim",
+        "Bhuvan Sachdeva",
+        "Karan Uppal",
+        "Naman Gupta",
+        "Vineeth N. Balasubramanian",
+        "Deepti Ghadiyaram"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CV",
+      "summary": "While most frames in long-form video are redundant, the critical information resides in temporal surprises: moments where the actual visual features deviate from their predicted evolution. Inspired by the human brain's predictive coding, we introduce Swift Sampling, an elegant, training-free frame selection algorithm that automatically identifies high-information moments in a video. Specifically, we model a video as a differentiable trajectory in the visual latent space and compute the velocity and acceleration of its features. Then, we apply Taylor expansion to project the expected path of subsequent frames. Frames that diverge sharply from this predicted manifold are identified as temporally surprising frames and selected for sampling. Unlike prior training-free methods that rely on auxiliary networks or video-specific hyperparameter tuning, Swift Sampling is incredibly lightweight, adding only 0.02x additional computational cost over baseline making it 30x cheaper overhead than leading baselines. Across three long-video question answering benchmarks and 10 different downstream tasks, Swift Sampling outperforms uniform sampling and prior query-agnostic baselines. It is especially powerful for long videos with limited frame budgets improving accuracy by up to +12.5 points.",
+      "published": "2026-05-21T16:20:31Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Slimmable ConvNeXt: Width-Adaptive Inference for Efficient Multi-Device Deployment",
+      "url": "https://arxiv.org/abs/2605.22677v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.22677v1",
+      "arxiv_id": "2605.22677",
+      "authors": [
+        "Janek Haberer",
+        "Jon Eike Wilhelm",
+        "Olaf Landsiedel"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV",
+      "summary": "Deploying vision models across devices with varying resource constraints, or even on a single device where available compute fluctuates due to battery state, thermal throttling, or latency deadlines, typically requires training and maintaining separate models. Width-adaptive inference addresses this by training a single set of shared weights containing multiple nested subnetworks of increasing capacity, but prior CNN-based approaches required switchable batch normalization, while recent scalable methods have focused on Vision Transformers. We present Slimmable ConvNeXt, which shows that ConvNeXt's modern design, specifically LayerNorm and inverted bottlenecks, makes it particularly suited for channel-width slimming, eliminating the normalization overhead of classical slimmable networks and producing a simpler training pipeline than both prior CNN and ViT approaches. On ImageNet-1k, Slimmable ConvNeXt-T with 3 subnetworks achieves 80.8% top-1 accuracy at 4.5 GMACs and 77.4% at 1.2 GMACs, trained from scratch for 600 epochs. At comparable compute, this exceeds HydraViT's 6-head subnetwork (78.4% at 4.6 GMACs) by 2.4 percentage points and its 3-head configuration (73.0% at 1.3 GMACs) by 4.4 percentage points, while also outperforming MatFormer-S (78.6%) and SortedNet-S (78.2%) at the same GMACs. Scaling to Slimmable ConvNeXt-B further improves maximum accuracy to 82.8% at 15.35 GMACs.",
+      "published": "2026-05-21T16:20:18Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "From Abstraction to Instantiation: Learning Behavioral Representation for Vision-Language-Action Model",
+      "url": "https://arxiv.org/abs/2605.22671v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.22671v1",
+      "arxiv_id": "2605.22671",
+      "authors": [
+        "Bing Hu",
+        "Zaijing Li",
+        "Rui Shao",
+        "Junda Chen",
+        "April Hua Liu",
+        "Wei-Shi Zheng",
+        "Liqiang Nie"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV",
+      "summary": "Vision-Language-Action (VLA) models often suffer from performance degradation under distribution shifts, as they struggle to learn generalized behavior representations across varying environments. While existing approaches attempt to construct behavior representations through action-centric latent variables, they are often limited by short-horizon temporal fragmentation and static execution-alignment, leading to inconsistent behaviors in complex scenarios. To address these limitations, we propose \\textbf{BehaviorVLA}, a framework that facilitates robust manipulation through the learning of a temporally coherent behavioral representations. Our approach features two symmetric components: (1) the \\textbf{Visuomotor Behavior Encoder (VBE)}, which utilizes a causal Mamba-based architecture to aggregate long-horizon trajectory information into a unified behavior representation; and (2) the \\textbf{Phase-conditioned Behavior Decoder (PBD)}, which decodes this representation into precise actions by dynamically aligning task-level priors with real-time execution progress. Experiments on RoboTwin 2.0, LIBERO, and CALVIN demonstrate state-of-the-art success rates of 58\\%, 98\\%, and 4.36 (Avg.Len), respectively. Notably, in real-world sim-to-real transfer, BehaviorVLA matches the performance of OpenVLA-OFT using only 50\\% of the demonstration data, showcasing its superior data efficiency and generalization.",
+      "published": "2026-05-21T16:14:19Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "SEGA: Spectral-Energy Guided Attention for Resolution Extrapolation in Diffusion Transformers",
+      "url": "https://arxiv.org/abs/2605.22668v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.22668v1",
+      "arxiv_id": "2605.22668",
+      "authors": [
+        "Javad Rajabi",
+        "Kimia Shaban",
+        "Koorosh Roohi",
+        "David B. Lindell",
+        "Babak Taati"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV",
+      "summary": "Diffusion transformers (DiTs) have emerged as a dominant architecture for text-to-image generation, yet their performance drops when generating at resolutions beyond their training range. Existing training-free approaches mitigate this by modifying inference-time attention behavior, often through Rotary Position Embeddings (RoPE) extrapolation combined with attention scaling. However, these strategies apply a uniform and content-agnostic scaling across RoPE components with distinct frequency characteristics, inducing a trade-off between preserving global structure and recovering fine detail. We introduce SEGA, a training-free method that dynamically scales attention across RoPE components according to the latent's spatial-frequency structure at each denoising step. This adaptive scaling improves both structural coherence and fine-detail fidelity. Experiments show that SEGA consistently improves high-resolution synthesis across multiple target resolutions, outperforming state-of-the-art training-free baselines.",
+      "published": "2026-05-21T16:09:01Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "SegCompass: Exploring Interpretable Alignment with Sparse Autoencoders for Enhanced Reasoning Segmentation",
+      "url": "https://arxiv.org/abs/2605.22658v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.22658v1",
+      "arxiv_id": "2605.22658",
+      "authors": [
+        "Zhenyu Lu",
+        "Liupeng Li",
+        "Jinpeng Wang",
+        "Haoqian Kang",
+        "Yan Feng",
+        "Ke Chen",
+        "Yaowei Wang"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.LG",
+        "cs.MM",
+        "eess.IV"
+      ],
+      "primary_category": "cs.CV",
+      "summary": "While large language models provide strong compositional reasoning, existing reasoning segmentation pipelines fail to transparently connect this reasoning to visual perception. Current methods, such as latent query alignment, are end-to-end yet opaque \"black boxes\". Conversely, textual localization readout is merely readable, not truly interpretable, often functioning as an unconstrained post-hoc step. To bridge this interpretability gap, we propose SegCompass, an end-to-end model that leverages a Sparse Autoencoder (SAE) to forge an explicit, interpretable, and differentiable alignment pathway. Given an image-instruction pair, SegCompass first generates a chain-of-thought (CoT) trace. The core of our method is an SAE that maps both the CoT and visual tokens into a shared, high-dimensional sparse concept space. A query codebook selects salient concepts from this space, which are then spatially grounded by a slot mapper into a multi-slot heatmap that guides the final mask decoder. The entire model is trained jointly, unifying reinforcement learning for the reasoning path with standard segmentation supervision. This SAE-driven interface provides a \"white-box\" connection that is significantly more traceable than latent queries and more coherent than textual readouts. Extensive experiments on five challenging benchmarks demonstrate that SegCompass matches or surpasses state-of-the-art performance. Crucially, our visual and quantitative analyses show a strong correlation between the quality of the learned sparse concepts and final mask accuracy, confirming that SegCompass achieves superior results through its enhanced and inspectable alignment. Code is available at https://github.com/ZhenyuLU-Heliodore/SegCompass.",
+      "published": "2026-05-21T15:59:39Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Seeing the Poem: Image-Semantic Detection of AI-Generated Modern Chinese Poetry with MLLMs",
+      "url": "https://arxiv.org/abs/2605.22654v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.22654v1",
+      "arxiv_id": "2605.22654",
+      "authors": [
+        "Shanshan Wang",
+        "Fengying Ye",
+        "Hanjia Lyu",
+        "Caiwen Gou",
+        "Junchao Wu",
+        "Jingming Yao",
+        "Chengzhong Xu",
+        "Jiebo Luo",
+        "Derek F. Wong"
+      ],
+      "categories": [
+        "cs.CL",
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV",
+      "summary": "Previous detection studies have shown that LLMs cannot be effectively used as detectors, but these studies have not addressed modern Chinese poetry. Moreover, no relevant research has explored the performance of LLMs in detecting modern Chinese poetry. This paper evaluates and enhances the performance of LLMs as detectors for modern Chinese poetry, and proposes an image-semantic guided poetry detection method. Compared with traditional detection approaches, our method innovatively incorporates images that reflect the content of the poetry. Through example-driven approaches, our method effectively integrates information such as meaning, imagery, and feeling from the image, then forms a complementary judgment with the poem text. Experimental results demonstrate that the LLM detectors based on our method outperform baseline detectors based on plain text, and even surpass the best-performing traditional detector, RoBERTa. The Gemini detector using our method achieves a Macro-F1 score of 85.65%, reaching the state-of-the-art level. The performance improvements of different LLM detectors on multiple LLMs-generated data prove the effectiveness of our method.",
+      "published": "2026-05-21T15:57:04Z"
+    }
+  ],
+  "news": [
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
+      "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+      "hn_url": "https://news.ycombinator.com/item?id=48212493",
+      "score": 1373,
+      "comments": 998,
+      "author": "tedsanders",
+      "time": 1779303930
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Gemini 3.5 Flash",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+      "hn_url": "https://news.ycombinator.com/item?id=48196570",
+      "score": 950,
+      "comments": 652,
+      "author": "spectraldrift",
+      "time": 1779212625
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "AI is just unauthorised plagiarism at a bigger scale",
+      "url": "https://axelk.ee/ai-is-just-unauthorised-plagiarism-at-a-bigger-scale/",
+      "hn_url": "https://news.ycombinator.com/item?id=48222383",
+      "score": 757,
+      "comments": 654,
+      "author": "speckx",
+      "time": 1779370692
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Qwen3.7-Max: The Agent Frontier",
+      "url": "https://qwen.ai/blog?id=qwen3.7",
+      "hn_url": "https://news.ycombinator.com/item?id=48205626",
+      "score": 696,
+      "comments": 285,
+      "author": "kevinsimper",
+      "time": 1779273302
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Project Hail Mary – Stellar Navigation Chart",
+      "url": "https://valhovey.github.io/gaia-mary/",
+      "hn_url": "https://news.ycombinator.com/item?id=48225297",
+      "score": 608,
+      "comments": 138,
+      "author": "speleo",
+      "time": 1779380591
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Google's Antigravity bait and switch",
+      "url": "https://www.0xsid.com/blog/antigravity-bait-n-switch",
+      "hn_url": "https://news.ycombinator.com/item?id=48222529",
+      "score": 547,
+      "comments": 272,
+      "author": "ssiddharth",
+      "time": 1779371459
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Throwing AI-generated walls of text into conversations",
+      "url": "https://noslopgrenade.com/",
+      "hn_url": "https://news.ycombinator.com/item?id=48219992",
+      "score": 509,
+      "comments": 305,
+      "author": "napolux",
+      "time": 1779355875
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Incident Report: May 19, 2026 – GCP Account Suspension",
+      "url": "https://blog.railway.com/p/incident-report-may-19-2026-gcp-account-outage",
+      "hn_url": "https://news.ycombinator.com/item?id=48204770",
+      "score": 442,
+      "comments": 255,
+      "author": "0xedb",
+      "time": 1779266275
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Was my $48K GPU server worth it?",
+      "url": "https://rosmine.ai/2026/05/13/was-my-48k-gpu-worth-it/",
+      "hn_url": "https://news.ycombinator.com/item?id=48184402",
+      "score": 304,
+      "comments": 225,
+      "author": "apwheele",
+      "time": 1779132783
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Anthropic is expanding to Colossus2. Will use GB200",
+      "url": "https://twitter.com/nottombrown/status/2057194829986300375",
+      "hn_url": "https://news.ycombinator.com/item?id=48214017",
+      "score": 287,
+      "comments": 324,
+      "author": "aurareturn",
+      "time": 1779310552
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Intuit to lay off over 3k employees to refocus on AI",
+      "url": "https://techcrunch.com/2026/05/20/intuit-to-lay-off-over-3000-employees-to-refocus-on-ai/",
+      "hn_url": "https://news.ycombinator.com/item?id=48216278",
+      "score": 250,
+      "comments": 186,
+      "author": "wapasta",
+      "time": 1779323761
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Show HN: I Dedicated 4 Years to Mastering Offline Password Cracking",
+      "url": "https://news.ycombinator.com/item?id=48221896",
+      "hn_url": "https://news.ycombinator.com/item?id=48221896",
+      "score": 214,
+      "comments": 42,
+      "author": "bojta-lepenye",
+      "time": 1779368197
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Show HN: Freenet, a peer-to-peer platform for decentralized apps",
+      "url": "https://freenet.org/",
+      "hn_url": "https://news.ycombinator.com/item?id=48223362",
+      "score": 202,
+      "comments": 110,
+      "author": "sanity",
+      "time": 1779374097
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "OpenAI Is Preparing to File for an IPO Soon",
+      "url": "https://www.wsj.com/tech/ai/openai-is-preparing-to-file-for-an-ipo-very-soon-0ec95af5",
+      "hn_url": "https://news.ycombinator.com/item?id=48210226",
+      "score": 182,
+      "comments": 383,
+      "author": "louiereederson",
+      "time": 1779294282
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Learnings from 100K lines of Rust with AI (2025)",
+      "url": "https://zfhuang99.github.io/rust/claude%20code/codex/contracts/spec-driven%20development/2025/12/01/rust-with-ai.html",
+      "hn_url": "https://news.ycombinator.com/item?id=48205415",
+      "score": 173,
+      "comments": 200,
+      "author": "pramodbiligiri",
+      "time": 1779271468
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Show HN: Rmux – A programmable terminal multiplexer with a Playwright-style SDK",
+      "url": "https://github.com/helvesec/rmux",
+      "hn_url": "https://news.ycombinator.com/item?id=48219918",
+      "score": 167,
+      "comments": 81,
+      "author": "shideneyu",
+      "time": 1779355320
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Sharla Boehm, the programmer whose code underpins the Internet",
+      "url": "https://www.scientificamerican.com/article/the-programmer-whose-code-underpins-the-internet/",
+      "hn_url": "https://news.ycombinator.com/item?id=48180173",
+      "score": 138,
+      "comments": 30,
+      "author": "dxs",
+      "time": 1779113450
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Reviving old scanners with an in-browser Linux VM bridged to WebUSB over USB/IP",
+      "url": "https://yes-we-scan.app/details",
+      "hn_url": "https://news.ycombinator.com/item?id=48177467",
+      "score": 116,
+      "comments": 34,
+      "author": "gmac",
+      "time": 1779098906
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "The memory shortage is causing a repricing of consumer electronics",
+      "url": "https://davidoks.blog/p/ai-is-killing-the-cheap-smartphone",
+      "hn_url": "https://news.ycombinator.com/item?id=48229319",
+      "score": 110,
+      "comments": 94,
+      "author": "d0ks",
+      "time": 1779400556
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Show HN: I made a tactical map-based WWII submarine simulator (public beta)",
+      "url": "https://silentshark.app/alpha/",
+      "hn_url": "https://news.ycombinator.com/item?id=48180924",
+      "score": 109,
+      "comments": 40,
+      "author": "epaga",
+      "time": 1779116901
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Fender escalates legal campaign against S-style guitars",
+      "url": "https://www.guitarworld.com/gear/electric-guitars/fender-cease-and-desist-lsl-instruments",
+      "hn_url": "https://news.ycombinator.com/item?id=48189539",
+      "score": 105,
+      "comments": 106,
+      "author": "rectang",
+      "time": 1779168510
+    }
+  ],
+  "projects": [
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fcolbymchenry%2Fcodegraph\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1137078255,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fcolbymchenry%2Fcodegraph\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1137078255,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Pre-indexed code knowledge graph for Claude Code, Codex, Cursor, and OpenCode — fewer tokens, fewer tool calls, 100% local",
+      "language": "TypeScript",
+      "stars_today": 4294,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fmultica-ai%2Fandrej-karpathy-skills\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1142983825,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fmultica-ai%2Fandrej-karpathy-skills\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1142983825,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+      "language": "",
+      "stars_today": 2614,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2FImbad0202%2Facademic-research-skills\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1167300963,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2FImbad0202%2Facademic-research-skills\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1167300963,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
+      "language": "Python",
+      "stars_today": 2579,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2FImbad0202%2Facademic-research-skills\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1167300963,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2FImbad0202%2Facademic-research-skills\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1167300963,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
+      "language": "Python",
+      "stars_today": 2579,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2FNousResearch%2Fhermes-agent\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1024554267,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2FNousResearch%2Fhermes-agent\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1024554267,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "The agent that grows with you",
+      "language": "Python",
+      "stars_today": 2056,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "sponsors/obra",
+      "url": "https://github.com/sponsors/obra",
+      "description": "An agentic skills framework &amp; software development methodology that works.",
+      "language": "Shell",
+      "stars_today": 1576,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Ftruelockmc%2Fstreambert\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1160232942,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Ftruelockmc%2Fstreambert\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1160232942,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "A cross-platform Electron Desktop App to stream and download any Movie, TV Series or Anime in the World. Zero Ads and Tracking",
+      "language": "JavaScript",
+      "stars_today": 1094,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "sponsors/msitarzewski",
+      "url": "https://github.com/sponsors/msitarzewski",
+      "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+      "language": "Shell",
+      "stars_today": 1018,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Ftrimstray%2Fthe-book-of-secret-knowledge\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:138393139,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Ftrimstray%2Fthe-book-of-secret-knowledge\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:138393139,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, cli/web tools and more.",
+      "language": "",
+      "stars_today": 756,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Frmyndharis%2FOpenWA\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1147961398,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Frmyndharis%2FOpenWA\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1147961398,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Free, Open Source, Self-Hosted WhatsApp API Gateway",
+      "language": "TypeScript",
+      "stars_today": 730,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fanthropics%2Fclaude-plugins-official\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1100776768,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fanthropics%2Fclaude-plugins-official\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1100776768,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+      "language": "Python",
+      "stars_today": 682,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fanthropics%2Fclaude-plugins-official\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1100776768,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fanthropics%2Fclaude-plugins-official\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1100776768,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+      "language": "Python",
+      "stars_today": 682,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2FLum1104%2FUnderstand-Anything\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1182081931,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2FLum1104%2FUnderstand-Anything\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1182081931,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Graphs that teach &gt; graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI, and more.",
+      "language": "TypeScript",
+      "stars_today": 666,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2FHKUDS%2FCLI-Anything\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1176011916,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2FHKUDS%2FCLI-Anything\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1176011916,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "language": "Python",
+      "stars_today": 656,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2FHKUDS%2FCLI-Anything\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1176011916,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2FHKUDS%2FCLI-Anything\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1176011916,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "language": "Python",
+      "stars_today": 656,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2FHKUDS%2FViMax\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:957480611,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2FHKUDS%2FViMax\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:957480611,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "\"ViMax: Agentic Video Generation (Director, Screenwriter, Producer, and Video Generator All-in-One)\"",
+      "language": "Python",
+      "stars_today": 537,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fmultica-ai%2Fmultica\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1133707766,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fmultica-ai%2Fmultica\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1133707766,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "The open-source managed agents platform. Turn coding agents into real teammates — assign tasks, track progress, compound skills.",
+      "language": "Go",
+      "stars_today": 534,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fcan1357%2Foh-my-pi\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1125856365,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fcan1357%2Foh-my-pi\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1125856365,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "⌥ AI Coding agent for the terminal — hash-anchored edits, optimized tool harness, LSP, Python, browser, subagents, and more",
+      "language": "TypeScript",
+      "stars_today": 500,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2FAlishahryar1%2Ffree-claude-code\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1144520675,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2FAlishahryar1%2Ffree-claude-code\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1144520675,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Use claude-code for free in the terminal, VSCode extension or discord like OpenClaw (voice supported)",
+      "language": "Python",
+      "stars_today": 450,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fantoinezambelli%2Fforge\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1159381774,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fantoinezambelli%2Fforge\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1159381774,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "A Python framework for self-hosted LLM tool-calling and multi-step agentic workflows",
+      "language": "Python",
+      "stars_today": 398,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fantoinezambelli%2Fforge\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1159381774,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fantoinezambelli%2Fforge\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1159381774,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "A Python framework for self-hosted LLM tool-calling and multi-step agentic workflows",
+      "language": "Python",
+      "stars_today": 398,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fmicrosoft%2Fmarkitdown\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:888092115,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fmicrosoft%2Fmarkitdown\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:888092115,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Python tool for converting files and office documents to Markdown.",
+      "language": "Python",
+      "stars_today": 313,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fkarpathy%2Fautoresearch\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1174820787,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fkarpathy%2Fautoresearch\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1174820787,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "AI agents running research on single-GPU nanochat training automatically",
+      "language": "Python",
+      "stars_today": 259,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2FZhuLinsen%2Fdaily_stock_analysis\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1131513930,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2FZhuLinsen%2Fdaily_stock_analysis\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1131513930,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "LLM驱动的 A/H/美股智能分析：多数据源行情 + 实时新闻 + LLM决策仪表盘 + 多渠道推送，零成本定时运行，纯白嫖. LLM-powered stock analysis system for A/H/US markets.",
+      "language": "Python",
+      "stars_today": 226,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Ffrappe%2Ferpnext\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1864233,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Ffrappe%2Ferpnext\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1864233,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Free and Open Source Enterprise Resource Planning (ERP)",
+      "language": "Python",
+      "stars_today": 201,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fteng-lin%2Fnotebooklm-py\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1129786550,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fteng-lin%2Fnotebooklm-py\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1129786550,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Unofficial Python API and agentic skill for Google NotebookLM. Full programmatic access to NotebookLM's features—including capabilities the web UI doesn't expose—via Python, CLI, and AI agents like Claude Code, Codex, and OpenClaw.",
+      "language": "Python",
+      "stars_today": 186,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fteng-lin%2Fnotebooklm-py\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1129786550,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fteng-lin%2Fnotebooklm-py\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1129786550,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Unofficial Python API and agentic skill for Google NotebookLM. Full programmatic access to NotebookLM's features—including capabilities the web UI doesn't expose—via Python, CLI, and AI agents like Claude Code, Codex, and OpenClaw.",
+      "language": "Python",
+      "stars_today": 186,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2FChromeDevTools%2Fchrome-devtools-mcp\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1054793726,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2FChromeDevTools%2Fchrome-devtools-mcp\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1054793726,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Chrome DevTools for coding agents",
+      "language": "TypeScript",
+      "stars_today": 151,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fvolcengine%2FOpenViking\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1128123594,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fvolcengine%2FOpenViking\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1128123594,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "OpenViking is an open-source context database designed specifically for AI Agents(such as openclaw). OpenViking unifies the management of context (memory, resources, and skills) that Agents need through a file system paradigm, enabling hierarchical context delivery and self-evolving.",
+      "language": "Python",
+      "stars_today": 130,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fdotnet%2Fskills\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1149257427,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fdotnet%2Fskills\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1149257427,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Repository for skills to assist AI coding agents with .NET and C#",
+      "language": "C#",
+      "stars_today": 129,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fopenai%2Fwhisper\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:537603333,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fopenai%2Fwhisper\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:537603333,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Robust Speech Recognition via Large-Scale Weak Supervision",
+      "language": "Python",
+      "stars_today": 106,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fgoogle%2Fadk-samples\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:958830671,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fgoogle%2Fadk-samples\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:958830671,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "A collection of sample agents built with Agent Development Kit (ADK)",
+      "language": "Python",
+      "stars_today": 33,
+      "total_stars": 0
+    }
+  ]
+}
