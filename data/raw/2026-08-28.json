@@ -1,0 +1,1452 @@
+{
+  "date": "2026-08-28",
+  "fetched_at": "2026-08-28T08:14:57.104688+00:00",
+  "papers": [
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "CritICL: Inference-Time Weak-to-Strong Generalization from Small Language Model Failure Modes",
+      "url": "https://arxiv.org/abs/2608.27455v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27455v1",
+      "arxiv_id": "2608.27455",
+      "authors": [
+        "Yufan Wu",
+        "Yinghui He",
+        "Zhengyi Hu",
+        "Lang Wei",
+        "Ruichen Li",
+        "Qifan Yang",
+        "Ting Zhu"
+      ],
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "summary": "Recent advances in inference-time scaling have significantly improved the reasoning performance of large language models (LLMs). However, these methods typically rely on repeated generation or external verification. To address this limitation, we introduce CritICL, a novel inference-time framework that improves reasoning while maintaining high efficiency. Our key insight is that LLM failure modes exhibit structured patterns across model scales within the same family. Instead of treating failures as undesirable outputs, CritICL leverages them as a source of guidance. Specifically, we utilize failure modes derived from weaker models and incorporate them into inference through critique-based in-context examples. We propose two variants: CritICL-dynamic, which adaptively predicts input-specific failure modes and retrieves critiques, and CritICL-static, which uses a global failure mode profile to provide stable guidance. Experimental results show that CritICL consistently outperforms standard in-context learning and achieves performance competitive with or superior to test-time scaling methods, while requiring significantly fewer generations and lower token cost. Code available at: https://github.com/umwyf/CRITICL",
+      "published": "2026-08-27T17:59:30Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution",
+      "url": "https://arxiv.org/abs/2608.27454v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27454v1",
+      "arxiv_id": "2608.27454",
+      "authors": [
+        "Liyan Tang",
+        "Cyrus Rashtchian",
+        "Chun-Sung Ferng",
+        "Andrew Tomkins",
+        "Da-Cheng Juan",
+        "Tu Vu"
+      ],
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "summary": "Agent skills package specialized knowledge and workflows into reusable resources that extend AI agent capabilities. Recent work automatically discovers such skills from agent experience, which enables agents to progressively adapt through interaction. However, the insights that guide skill development typically remain scattered across optimization histories, limiting their systematic reuse across iterations. We introduce WikiSkill, a framework that co-evolves agent skills with a persistent knowledge base (wiki). At a high level, WikiSkill separates raw execution experience, accumulated knowledge, and executable skills, while continuously consolidating experience into the wiki, which subsequent skill updates can build on. Across diverse benchmarks and models, WikiSkill consistently outperforms state-of-the-art skill-evolution methods and improves over no-skill baselines in most model-benchmark settings. We find that skill evolution complements model scaling: larger models generally benefit more from evolved skills, while smaller models with skills can outperform substantially larger models without them. We also find that evolved skills transfer effectively across models and model families, and skills evolved by other models can outperform self-evolved skills. Finally, our ablation studies confirm that persistent knowledge accumulation in the wiki is critical for effective skill evolution. These results demonstrate the benefits of systematically accumulating and refining agent experience for developing reusable and transferable skills.",
+      "published": "2026-08-27T17:59:11Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "SWE-Prime: Fewer Trajectories, Better Performance",
+      "url": "https://arxiv.org/abs/2608.27449v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27449v1",
+      "arxiv_id": "2608.27449",
+      "authors": [
+        "Dewu Zheng",
+        "Ruizhe Ye",
+        "Yanlin Wang",
+        "Yang Ye",
+        "Hongyu Zhang",
+        "Ensheng Shi",
+        "Xilin Liu",
+        "Yuchi Ma",
+        "Jianxing Yu",
+        "Zibin Zheng"
+      ],
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "summary": "To improve large language models' ability to resolve real-world software issues, prior work has focused on constructing large-scale agent trajectory datasets and performing supervised fine-tuning (SFT) on successful trajectories. However, task success does not guarantee high-quality supervision: successful trajectories may still contain ineffective, redundant, or risky steps. Directly using such trajectories for SFT can introduce noisy supervision and encourage models to imitate undesirable problem-solving behaviors. Therefore, we propose SWE-Prime, a multi-granularity, two-stage SFT data selection method that progressively filters training data at the trajectory and segment levels. Specifically, the first stage performs trajectory-level screening based on process quality, result quality, and data representativeness, selecting a high-quality and representative subset of successful trajectories. The second stage performs segment-level selection by grouping consecutive steps into semantic segments and assessing each segment based on its contribution to the final solution, learnability, and potential risks. During SFT, all segments remain in the sequence to preserve context, while only selected segments contribute to the loss computation. Experiments on SWE-Bench Pro and SWE-Bench Verified show that training on the 10% trajectory subset selected by SWE-Prime outperforms training on the full resolved dataset, yielding relative performance gains of up to 12.2% and 24.2%, respectively.",
+      "published": "2026-08-27T17:58:10Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "TTPO: Test-Time Policy Optimization",
+      "url": "https://arxiv.org/abs/2608.27448v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27448v1",
+      "arxiv_id": "2608.27448",
+      "authors": [
+        "Aozhe Wang",
+        "Zhengxi Lu",
+        "Jianze Wang",
+        "Shangke Lv",
+        "Ying Liu",
+        "Weiming Lu",
+        "Jun Xiao",
+        "Yueting Zhuang",
+        "Hua Yang",
+        "Qianglong Chen",
+        "Yongliang Shen"
+      ],
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "summary": "Recent prominent post-training methods, such as Reinforcement Learning (RL) and On-Policy Self-Distillation (OPSD), have driven rapid progress in mathematical reasoning for large language models, yet their reliance on ground-truth labels precludes test-time training (TTT). Replacing ground truth with majority-vote pseudo-labels is a natural alternative, yet it is fragile: an incorrect vote corrupts the teacher and misleads every token. We observe that this failure mode is asymmetric: rollouts that disagree with the pseudo-label are typically wrong regardless of whether the vote itself is correct. Building on this observation, we propose Test-Time Policy Optimization (TTPO), an asymmetric objective that distills agreeing rollouts via OPSD and penalizes disagreeing rollouts with Grouped RL. Token-level selection further refines both branches: distillation down-weights already-converged positions, while RL penalizes only confident errors. Both updates remain well-grounded even under frequent pseudo-label errors, and majority-vote routing yields tighter self-supervision as the model improves. Without any labels, TTPO matches label-supervised OPSD on five competition-level benchmarks, raises Qwen3-1.7B from 38.0% to 45.2% in TTT, yields +25.2% to +36.4% without thinking, and shows strong cross-task generalization.",
+      "published": "2026-08-27T17:58:10Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "From Static to Dynamic: Benchmarking Real-World Code Review with MCR-Bench",
+      "url": "https://arxiv.org/abs/2608.27442v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27442v1",
+      "arxiv_id": "2608.27442",
+      "authors": [
+        "Dewu Zheng",
+        "Yanlin Wang",
+        "Xiwen Wang",
+        "Kefeng Duan",
+        "Hongyu Zhang",
+        "Xilin Liu",
+        "Yuchi Ma",
+        "Zibin Zheng"
+      ],
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "summary": "In real-world software development, code review typically involves iterative interactions between developers and reviewers to improve software quality, making the process costly and time-consuming. Although recent work explores large language models (LLMs) for automated code review, most approaches oversimplify code review into a single-round, static decision task, which fails to capture the multi-round interactive nature and the complex problem-solving processes inherent in realistic review scenarios. To bridge this gap, we introduce MCR-Bench, the first defect state-aware benchmark designed for realistic multi-round code review. MCR-Bench covers five commonly-used programming languages and consists of 2,269 real-world multi-round code review tasks, each of which is annotated with fine-grained defect information and cross-round state labels. Each task in MCR-Bench is equipped with fine-grained defect metadata (e.g., description, type, severity) alongside dynamic state annotations, capturing the complete evolutionary trajectory of a defect throughout the multi-round process. We obtain several findings through extensive experiments on MCR-Bench with mainstream LLMs. (1) Limited overall capability: experiments reveal that mainstream LLMs exhibit limited overall performance in defect detection and defect lifecycle state tracking, with performance degrading significantly as the number of interaction rounds increases; (2) Defect-sensitive performance: LLMs' performance varies substantially across different defect types and severity levels, with semantically complex or low-salience defects being significantly more likely to be missed; (3) Underlying Failure Mechanisms: our in-depth error analysis dissects the distinct drivers of false positives and false negatives, revealing critical weaknesses such as cross-round temporal misalignment and inadequate long-range memory.",
+      "published": "2026-08-27T17:56:24Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Stochastic Estimation of Transduced Language Models",
+      "url": "https://arxiv.org/abs/2608.27428v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27428v1",
+      "arxiv_id": "2608.27428",
+      "authors": [
+        "Vésteinn Snæbjarnarson",
+        "Samuel Kiegeland",
+        "Manuel de Prada Corral",
+        "Ryan Cotterell",
+        "Tim Vieira"
+      ],
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "summary": "Transduced language models (TLMs) compose a pretrained \\emph{source} language model with a functional finite-state transducer to induce a language model over \\emph{target} strings. Computing the probability of a target prefix under a TLM amounts to summing the source-model probabilities of all source strings that the transducer maps to target strings beginning with that prefix. This set can be exponentially large or infinite. Prior work uses a computational shortcut based on source prefix probabilities, then approximates the resulting sum with threshold-pruned beam summing. This produces a lower bound with unknown error. Instead, we resample source prefixes without replacement and reweight each selected prefix by the inverse of its inclusion probability. We show that applying this correction recursively gives an unbiased estimator of the target prefix probability and lets us estimate the mass lost by threshold pruning. Our beam-summing algorithm extends the retained source prefixes and samples which prefixes to keep, reducing their number as more probability mass is added to the running estimate. This can save computation and guarantees that the run halts with probability one. We evaluate the method on encyclopedic text and DNA against sequential Monte Carlo baselines that resample with replacement. It achieves a better compute--variance tradeoff on text and lower error at the same maximum number of particles on DNA. On a DNA-to-amino-acid transduction, it reduces runtime by several orders of magnitude relative to threshold-pruned beam summing and makes estimating prefix probabilities for long target strings feasible. Replacing threshold pruning with unbiased sampling in a published reading-time analysis substantially lowers the estimated corpus surprisal but leaves the published conclusions unchanged.",
+      "published": "2026-08-27T17:50:21Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Boosting LLM Exploration via Weak-Model Guidance in RLVR",
+      "url": "https://arxiv.org/abs/2608.27420v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27420v1",
+      "arxiv_id": "2608.27420",
+      "authors": [
+        "Xingyu Shen",
+        "Huishuai Zhang",
+        "Peng Li",
+        "Yinchun Wang",
+        "Dongyan Zhao"
+      ],
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "summary": "Reinforcement Learning with Verifiable Rewards (RLVR) significantly improves LLM reasoning but often causes a drop in policy entropy, leading to narrowed reasoning coverage and degraded pass@$k$ for large $k$. While existing methods mitigate this entropy collapse through algorithmic regularizations, cross-model non-parametric perturbation is also neglected. In this work, we propose a simple yet effective approach to preserve the generative diversity of LLMs during RLVR. Instead of relying solely on internal exploration, we force the target model to generate answers based on partial reasoning trajectories generated by a smaller, weaker language models. These unfamiliar prefixes effectively disrupt over-confidence and encourage the exploration of distinct reasoning paths. We empirically study the potential of outer prefixes, revealing the mechanism of the impact of distributional discrepancy to the exploration dynamics in RLVR training. Experiments across multiple mathematical benchmarks show that our method consistently outperforms vanilla RLVR. Notably, the performance gain becomes increasingly pronounced as $k$ scales up, demonstrating a substantial expansion of reasoning coverage. Furthermore, our approach efficiently mitigates entropy collapse without requiring additional SFT, intricate reward designs, or complex prompting.",
+      "published": "2026-08-27T17:45:50Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Consolidating RLVR Capabilities Across Domains: A Deep Dive into Fusion Paradigms",
+      "url": "https://arxiv.org/abs/2608.27409v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27409v1",
+      "arxiv_id": "2608.27409",
+      "authors": [
+        "Siye Wu",
+        "Kai Yang",
+        "Yuchen Cai",
+        "Xin Xu",
+        "Peng-Yuan Wang",
+        "Jiaxuan Wang",
+        "Jiashun Liu",
+        "Jiafei Lyu",
+        "Yangkun Chen",
+        "Saiyong Yang",
+        "Yanghua Xiao"
+      ],
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "summary": "Reinforcement learning with verifiable rewards (RLVR) improves specific capabilities of large language models, but covering multiple capabilities often involves training separate domain experts and subsequently consolidating them. We organize three fusion paradigms by the artefacts they reuse: Merge combines expert task vectors, Mix RL pools their datasets, and multi-teacher on-policy distillation (MOPD) uses both. Because they have largely been studied in isolation, how they compare and how to choose among them remain unclear. We compare all three using shared experts and data across model scales and a multi-domain benchmark suite. Although their average performance differs by at most 1.4 points, the gap reaches 8.6 points on a single benchmark, with domain-level variation tracking cross-domain relations visible in task-vector geometry. Training dynamics expose distinct constraints: Mix RL depends on domain mixture proportions, MOPD remains bounded by its teachers, and Merge compresses all expert updates into one. All three improve single-sample accuracy without measurable gains in solution coverage or losses in held-out capabilities. These results yield a practical guideline: use Merge when experts already exist and cheap fusion is paramount; Mix RL when training a unified model without experts, with domain proportions adjusted for cross-domain transfer; and MOPD when preserving domain-specific gains matters more than surpassing teachers or minimizing end-to-end cost.",
+      "published": "2026-08-27T17:38:04Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "How Language Models Organize and Structure Moral Knowledge",
+      "url": "https://arxiv.org/abs/2608.27402v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27402v1",
+      "arxiv_id": "2608.27402",
+      "authors": [
+        "Orion Reblitz-Richardson"
+      ],
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CL",
+      "summary": "How do large language models (LLMs) organize moral knowledge? Models detect moral content broadly, but detection is a low bar. We ask whether they go further, distinguishing moral foundations from one another and organizing the relationships between them geometrically. We train six independent linear probes on open-weight language models, one per Moral Foundations Theory (MFT) category (care/harm, fair/cheat, lib/oppress, loy/betray, auth/subv, sanc/degrade), and examine how the resulting directions relate to each other in representation space. We find the directions neither collapse into a single moral detector nor isolate from one another. Rather, they span a near-maximal number of independent dimensions while sharing a positive common component. The shared component is the signature of integration, and it is moral-specific relative to a matched non-moral concept battery built identically (mean pairwise cosine 0.26 vs. 0.013). The geometry is consistent across architectures and scale and reaches its integration regime early in pre-training, well before probe accuracy saturates. The structure the model discovers shows no evidence of the individualizing/binding distinction predicted by Moral Foundations Theory (an underpowered test: only 20 candidate partitions exist) but rather reflects corpus statistics. Extending to moral dilemmas, each dilemma direction partially composes from its component foundations, at 2.7x a mismatched-pair baseline, while the majority of its variance encodes conflict-specific structure. The model represents moral tension itself, not a pre-resolved judgment.",
+      "published": "2026-08-27T17:30:30Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Making Clinical Language Models Auditable: Concept-Guided Fine-Tuning for Robust Prediction",
+      "url": "https://arxiv.org/abs/2608.27397v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27397v1",
+      "arxiv_id": "2608.27397",
+      "authors": [
+        "Jin Mu",
+        "Guanhua Chen"
+      ],
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL",
+      "summary": "Clinical language models can achieve strong in-hospital accuracy yet fail under deployment shifts because they exploit note-specific artifacts (e.g., templates, separators, boilerplate) that do not reflect patient state. We propose CAST (Concept-guided Artifact Suppression Tuning), an SAE-based framework for auditable clinical text classification. CAST uses Sparse Autoencoders to expose sparse, human-auditable features from intermediate Transformer activations, labels SAE latents with an LLM-assisted interpretation pipeline and ICD-10 retrieval constraints, suppresses verified artifact latents via residual subtraction during fine-tuning, and provides post-hoc per-concept attributions for auditing model decisions. On MIMIC-IV discharge-note mortality prediction, CAST improves over its corresponding fine-tuned encoder baselines and remains competitive with strong LLM baselines, while producing a feature-level audit trail of the clinical concepts that support each prediction and the artifact concepts suppressed during training.",
+      "published": "2026-08-27T17:28:35Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "RATIO: A Benchmark for Retrieval Across Typed Ideation Operations in Scientific Literature",
+      "url": "https://arxiv.org/abs/2608.27394v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27394v1",
+      "arxiv_id": "2608.27394",
+      "authors": [
+        "Maayan Sharon",
+        "Tom Hope"
+      ],
+      "categories": [
+        "cs.CL",
+        "cs.IR"
+      ],
+      "primary_category": "cs.CL",
+      "summary": "Retrieved scientific literature can serve as inspiration for both human and AI scientists. Inspiration can take different forms: prior work may directly suggest how to address a problem, or surface directions at different levels of abstraction - zooming out to a more general view or zooming in to a concrete realization. We introduce RATIO (Retrieval Across Typed Ideation Operations), a large-scale benchmark in which relevance is defined by three operations which we name ideation moves: Address retrieves potential approaches for stated problems, Broaden retrieves more general formulations, and Specify retrieves concrete instantiations. RATIO is constructed from millions of full-text scientific papers across CS literature via a general recipe that extends discourse-marker distant supervision - previously used only for classification - to corpus-scale retrieval, combined with extensive LLM and human vetting. Experiments show that operation-specific fine-tuning substantially boosts retrievers but leaves much room for further improvements. RATIO provides a scalable training and evaluation framework for retrieval components that support literature-grounded ideation, opening up new research avenues on scientific inspiration retrieval.",
+      "published": "2026-08-27T17:24:58Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "CorporateBench: Large-Scale Q&A Benchmarking with Temporal Knowledge Bases",
+      "url": "https://arxiv.org/abs/2608.27391v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27391v1",
+      "arxiv_id": "2608.27391",
+      "authors": [
+        "Sil Hamilton",
+        "Albert Yu Sun",
+        "Oscar J. Romero",
+        "Carl-Leander Henneking",
+        "David Mimno",
+        "Bishan Yang",
+        "Igor Labutov"
+      ],
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CL",
+      "summary": "LLMs are increasingly able to answer complex questions about enterprise-scale document collections. But evaluation is hard: companies don't want to share internal communications, and synthetic datasets have been overly simple. We present CorporateBench (CB), a human-validated multi-task Q&A benchmark whose scale approaches the conditions LLMs encounter in corporate communication networks, with evaluation corpora surpassing 230,000 documents. CB evaluates LLMs across two dimensions (information extraction and knowledge base querying) through four synthetically generated firms ranging from 12 to 10,000 employees. Each corpus is sampled from a temporally evolving knowledge base describing a consistent world, guaranteeing cross-document logical consistency even across hundreds of thousands of documents. We evaluate five LLMs on CB, revealing increasingly poor performance as input size approaches realistic scales. CB provides LLM developers a metric for corporate communication reasoning, filling a crucial gap in the benchmarking ecosystem.",
+      "published": "2026-08-27T17:23:04Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "D2C-Routing: Dimension-to-Composition Evidence Routing for Mixed-Origin AI-Generated Text Detection",
+      "url": "https://arxiv.org/abs/2608.27380v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27380v1",
+      "arxiv_id": "2608.27380",
+      "authors": [
+        "Xin Chen",
+        "Fuwei Zhang",
+        "Yiqi Tong",
+        "Wei Guo",
+        "Yutian Xiao",
+        "Fuzhen Zhuang"
+      ],
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "summary": "AI-generated text detection is commonly framed as a binary document-level judgment about whether a text is human-written or machine-generated. This framing breaks down for mixed-origin writing, where content origin and expression origin may differ. We cast mixed-origin detection as dimension-to-composition source attribution, inferring content origin and expression origin before composing them into four collaboration types. We propose Dimension-to-Composition Routing (D2C-Routing), which routes content-side and expression-side evidence to supervised dimension heads before a learned gated composition layer predicts the final label. On MixD2C, a reconstructed split derived from the HART mixed-origin benchmark, our disclosed D2C-Routing-based detector system reaches 0.8603 four-way Avg TPR@1%FPR, 6.5 points above the same-split RACE-local rerun. Core ablations support the routing design, while error analysis shows that distinguishing AI-content/human-expression from fully AI-generated text remains the hardest boundary. Code is available at https://github.com/bystander563/d2c-routing-artifact.",
+      "published": "2026-08-27T17:17:27Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Puro-2B: Poor Lab's Qwen2-1.5B Trained on RTX 5090 within $5090",
+      "url": "https://arxiv.org/abs/2608.27370v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27370v1",
+      "arxiv_id": "2608.27370",
+      "authors": [
+        "Kairong Luo",
+        "Jiarui Cui",
+        "Yaorui Yin",
+        "Shengqi Chen",
+        "Yiming Yang",
+        "Linxiang Gao",
+        "Yanmohan Wang",
+        "Mingzhe Zhang",
+        "Kaiyue Wen",
+        "Kaifeng Lyu",
+        "Wenguang Chen"
+      ],
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CL",
+      "summary": "Language model pretraining has become almost synonymous with prohibitive cost, placing it out of reach for much of the academic and open-source communities. Although strong open-source efforts already exist, including open-weight models and open-source training recipes, a cost-efficient, hardware-accessible, and open-source pretraining recipe has long been missing. Even at a small scale, training Llama-3.2-3B costs over \\$1.5M, and reproducing SmolLM3-3B needs over \\$700K. In this report, we present an open pretraining recipe designed to lower this barrier. Using this recipe, we train a collection of Puro-2B models from scratch on up to 1.4 trillion tokens with FP8 precision on consumer-grade RTX 5090 GPUs. The models in the collection differ in token budgets and selected recipe variants. Our best model is trained at a compute cost of less than \\$6.9K and approaches Qwen2.5-1.5B performance under our evaluation protocol. This cost efficiency is enabled by a combination of approaches, including hardware selection, low-precision training, hyperball optimization, curriculum model averaging, and the data recipe. Beyond the recipe itself, we provide two additional results. First, across the Puro-2B collection, we derive a Puro Cost Scaling Law that relates training cost to average model performance; the fitted law suggests that about \\$4.4K, less than \\$5,090, is sufficient to reach the performance of Qwen2-1.5B. Second, as an end-to-end case study, we examine how pretraining data curricula shape downstream performance after post-training. Such controlled studies are enabled by having access to the full pretraining pipeline rather than model weights alone. We release the full training recipe for Puro-2B, including data, code, and model weights under Apache 2.0 at https://huggingface.co/collections/thu-pacman/puro-2b.",
+      "published": "2026-08-27T17:07:12Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Your Voice Cloning System is Secretly a Voice Anonymizer",
+      "url": "https://arxiv.org/abs/2608.27360v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27360v1",
+      "arxiv_id": "2608.27360",
+      "authors": [
+        "Romolo Muletta",
+        "Felix Matthias Saaro",
+        "Mark Cieliebak",
+        "Jan Deriu"
+      ],
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "summary": "Speaker anonymization suppresses speaker-identifying attributes from speech while preserving linguistic content and quality. We propose repurposing XTTSv2, a multilingual voice cloning model trained on 27k hours of speech, for speaker anonymization without retraining. Our key insight is that XTTSv2's voice cloning capabilities preserve prosodic structure independently of speaker identity, enabling voice conversion by conditioning on a pseudo-speaker. We introduce an iterative refinement strategy that balances privacy and utility by maximizing a harmonic mean of speaker dissimilarity and intelligibility. Evaluated on seven European languages across CommonVoice and Multilingual LibriSpeech, our system achieves near-optimal privacy (EER $\\approx$ 0.49), competitive intelligibility, and substantially better speech quality than dedicated anonymization baselines, while requiring no language-specific training. We release the code here: https://github.com/rm00cr/coqui-tts.",
+      "published": "2026-08-27T16:59:58Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "RCMN: Understanding Misleadingness in Influential Public Discourse",
+      "url": "https://arxiv.org/abs/2608.27358v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27358v1",
+      "arxiv_id": "2608.27358",
+      "authors": [
+        "Peiling Yi"
+      ],
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL",
+      "summary": "Influential public discourse shapes public beliefs and can also mislead, not only through what is stated, but also through how information is framed, omitted, contextualised, and communicated. Yet less research has focused on how such misleadingness arises and shapes the interpretations formed by readers. To address this gap, we introduce Reader-Centric Misleadingness Understanding (RCMN), a framework that operationalises misleadingness through five dimensions: misleading mechanism, likely reader interpretation, evidence-warranted interpretation, emotional arousal, and communicative intent. Based on this framework, we construct an evidence-grounded dataset of influential public discourse. Empirical findings show that misleadingness is diverse and extends well beyond fabrication, with unsupported inference, exaggeration, and omission among the prevalent mechanisms, and is frequently associated with heightened emotional arousal and distortive communicative intent. Moreover, we investigate whether lightweight claim-and-context representations retain sufficient cues for understanding reader-centric misleadingness without access to richer contextual, evidential, and multimodal information. Evaluation across five recent generative foundation models shows that reader-level interpretations can often be recovered from such limited representations, whereas identifying how misleadingness is produced remains considerably more challenging. These findings highlight the potential of lightweight representations for scalable misleadingness analysis, while reliable understanding of misleading mechanisms continues to require richer contextual and evidential grounding.",
+      "published": "2026-08-27T16:57:40Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "INTENT-AS-A-TOOL Makes it Easy to Track Agentic Misalignment",
+      "url": "https://arxiv.org/abs/2608.27348v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27348v1",
+      "arxiv_id": "2608.27348",
+      "authors": [
+        "Yutong Zhang",
+        "Jianshuo Dong",
+        "Peng Xu",
+        "Long Wang",
+        "Jie Zhang",
+        "Tianwei Zhang",
+        "Xiaoping Zhang",
+        "Han Qiu"
+      ],
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "summary": "As large language models (LLMs) are deployed as autonomous agents, safety failures increasingly involve consequential actions. We study agentic misalignment, where agents take harmful actions under goal conflicts and pressures. Using chain-of-thought (CoT) monitoring, we find that harmful execution is often preceded by intent signals in reasoning. However, post-hoc CoT labels are too coarse to show how intent changes during generation. We introduce INTENT-AS-A-TOOL, an approach that adds intent-targeted tools to give the model a dedicated channel for expressing commitment to a target behavior. The probability of calling an intent tool provides a judge-free, fine-grained signal of the model's tendency to pursue that behavior. Our results show that INTENT-AS-A-TOOL complements CoT monitoring, expands post-hoc CoT labels into dense trajectories, and identifies critical steps for online intervention. These findings suggest that action preferences are useful for tracking agentic misalignment during reasoning. Our code and data are accessible: https://github.com/RebeccaZhang22/intent-as-a-tool.",
+      "published": "2026-08-27T16:47:19Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Pair-Level Essay-Scale Republication and Reuse from Fragmented Historical Text Reuse: A Workflow Study on Eighteenth-Century Books and Newspapers",
+      "url": "https://arxiv.org/abs/2608.27343v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27343v1",
+      "arxiv_id": "2608.27343",
+      "authors": [
+        "Ke Shu",
+        "Kira Hinderks",
+        "Eetu Mäkelä",
+        "Mikko Tolonen"
+      ],
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "summary": "This paper addresses the recovery of essay-scale republication and reuse from fragmented text-reuse evidence, a setting whose central challenge is pair-level evidence consolidation and not fragment retrieval alone. The study focuses on a candidate set centered on essays by eighteenth-century Scottish philosopher David Hume, spanning books from ECCO (Eighteenth Century Collections Online) and historical newspapers. Because the input consists of fragmented reuse hits instead of clean document pairs, and positive coverage is inherently incomplete, we formulate the task as pair-level evidence consolidation into plausible transmission relations and compare three methodological families: a staged rule-based workflow, baselines (a decision tree and two direct LLM settings), and automated rule adaptation. On labeled ECCO--ECCO slices, pair-level feature aggregation alone already reaches 0.948 F1 on the main labeled slice, while the final workflow gives the strongest overall precision-recall trade-off among the tested rule stages. On the full ECCO--ECCO candidate universe, direct LLM baselines flag up to 14,886 pairs as reprints compared to 771 for the final workflow, behaving in this direct-prompt setup as high-recall candidate expanders rather than precision-controlled deployment classifiers. On ECCO--Newspaper, manual audit confirms all 176 predicted positives as genuine cases of republication or reuse, while issue duplication and source-side multiplicity reveal additional provenance structure. Under incomplete ground truth, auditable pair-level evidence consolidation provides a practical way to produce compact candidate spaces for historical inspection.",
+      "published": "2026-08-27T16:43:27Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Beyond Parallel Blindness: Information Floors and Model Gaps in Block Drafting",
+      "url": "https://arxiv.org/abs/2608.27339v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27339v1",
+      "arxiv_id": "2608.27339",
+      "authors": [
+        "Xinwei Qiang",
+        "Xiang Fang",
+        "Chang Chen",
+        "Yue Guan",
+        "Yufei Ding"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.CL",
+        "cs.IT"
+      ],
+      "primary_category": "cs.CL",
+      "summary": "Block drafters propose several tokens in one forward pass, before earlier target tokens are realised. Their rejection mixes two losses: missing within-block path information and imperfect modelling of observable information. Accepted length cannot distinguish them. We separate the two with an information floor, the minimum expected rejection at a specified conditioning order; rejection above this floor is the model gap. Estimating both from target rollouts across four domains, four open-weight targets, and a frontier API target yields three findings. First, the all-parallel floor reaches $0.286$ at the final slot on Qwen3-4B, limiting even the best proposal to $71\\%$ per-slot acceptance. Second, one realised token removes $86$--$100\\%$ of this floor, a locality also recovered by an independent mutual-information analysis. Third, current drafters remain far above their floors: the final-slot model gap accounts for $43$--$64\\%$ of DFlash rejection and $85$--$92\\%$ of DSpark's oracle-conditioned rejection. These findings separate the value of short-range conditioning from proposal quality.",
+      "published": "2026-08-27T16:40:45Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "BTS-AgentBench: A Deterministic, Replayable Pipeline from Read-Only Telemetry Logs to Agent Benchmarks",
+      "url": "https://arxiv.org/abs/2608.27334v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27334v1",
+      "arxiv_id": "2608.27334",
+      "authors": [
+        "Jeong-Yoon Kim"
+      ],
+      "categories": [
+        "cs.CL",
+        "cs.SE"
+      ],
+      "primary_category": "cs.CL",
+      "summary": "Industrial sites contain large volumes of read-only telemetry, but few benchmarks specify how to compile these records into executable multi-turn agent tasks. We present a telemetry-to-episode construction method instantiated as BTS-AgentBench. The pipeline normalizes BTS metadata and raw histories into a read-only tool store, compiles static tasks with tool-derived gold answers and evidence, and lifts retained tasks into typed, bounded operator-facing episodes. The 532-row release adds clarification, goal revision, timestamp policy, quality-gated reporting, and evidence attribution while preserving the source computation and split. Coded contract preflight reports zero findings, and the construction-exclusion controller completes 0/532 rows. Two independent raw-to-episode builds match all 11 logical tool-store exports and reproduce the released 356/87/89 train/dev/test artifact exactly. Applying the shared construction path to XAI4HEAT produces 204 episodes; on its 41-row held-out test split, the controller completes 0 rows and the retained GPT-5.5 execution completes all 41. Code, artifacts, and replay reports are available at https://github.com/kjy7567/BTS-AgentBench.",
+      "published": "2026-08-27T16:35:52Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Learning a Continuous Sepsis Severity Score Without Hour-by-Hour Supervision: A Two-Site Retrospective Study",
+      "url": "https://arxiv.org/abs/2608.27421v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27421v1",
+      "arxiv_id": "2608.27421",
+      "authors": [
+        "Kevin Zhu",
+        "Ryan Zhang",
+        "Baraa Abed",
+        "Tilendra Choudhary",
+        "Malvern Madondo",
+        "Mehak Arora",
+        "Yixuan Yang",
+        "Alasdair Gent",
+        "Aditya Nagori",
+        "Omer T. Inan",
+        "Krista L. Haines",
+        "Patrick Georgoff",
+        "Suresh M. Agarwal",
+        "Vijay Krishnamoorthy",
+        "Tetsu Ohnuma",
+        "Mihai V. Podgoreanu",
+        "Michael R. Pinsky",
+        "Gilles Clermont",
+        "Craig M. Coopersmith",
+        "Craig S. Jabaley",
+        "Rishikesan Kamaleswaran"
+      ],
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "summary": "Currently used sepsis severity indices rely on fixed variables and weights established decades ago, which are coarsely discretized and calibrated to a cohort that no longer reflects contemporary critical care. No alternative learned directly from patient trajectories is in routine use. We conducted a retrospective two-cohort study on a total of 29,116 and 7,691 adult patients meeting Sepsis-3 criteria from two hospital systems in Massachusetts and Georgie, respectively. We developed a sepsis index using 43 routinely charted variables over a 72-hour treatment window. Unlike previous studies, we use mortality as a treatment-level ranking signal rather than a per-state target, allowing credit to be redistributed non-uniformly across timesteps. Evaluation was done on a permanent 20% test holdout, using clinical vignettes and Spearman correlation. Uncertainty intervals were obtained by bootstrap resampling of whole patients. Under this ranking scheme, non-survivors scored 1.19-1.64 points higher than survivors on a 0-10 scale within all strata of baseline SOFA-2, with similar results stratifying within lactate, mean arterial pressure (MAP), and creatinine. Within-patient change in the index correlated with change in lactate (Spearman rho = 0.39; n = 1,854). Similar, weaker correlations were found for MAP and creatinine. On a cohort level, cross-institutional agreement measured by Spearman correlation between models trained on different sites, were 70-77% of same-site correlation. External within-patient correlations were 0.54 and 0.59 against ceilings of 0.92 and 0.90. Our index also correlated with established indices, while null controls stayed near zero. Our index demonstrated hourly prognostic information that meaningfully separates patient outcomes and is consistent with clinical expectation, indicating potential as a decision support tool complementing clinical judgement.",
+      "published": "2026-08-27T17:46:21Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Scaling Graph Neural Networks for Friend Recommendation: Multi-Hash User Embeddings and Temporal Neighbor Sampling",
+      "url": "https://arxiv.org/abs/2608.27413v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27413v1",
+      "arxiv_id": "2608.27413",
+      "authors": [
+        "Maksim Utushkin",
+        "Andrei Ovsiannikov",
+        "Alexander D'yakonov"
+      ],
+      "categories": [
+        "cs.IR",
+        "cs.LG",
+        "cs.SI"
+      ],
+      "primary_category": "cs.LG",
+      "summary": "Friend recommendation is inherently graph-structured: the relevance of a potential connection depends on multi-hop social context rather than user attributes alone. However, deploying message-passing GNNs on a production-scale social graph with hundreds of millions of users and tens of billions of edges requires addressing numerous modeling and systems challenges. We present a scalable end-to-end GNN ranking system for production social graphs, focusing on two design choices that are critical in this setting: multi-hash ID embeddings and temporal neighbor sampling. Multi-hash embeddings are common for high-cardinality features, but industrial GNN systems typically either ignore trainable IDs or accept full embedding tables, exceeding 200 GB for our graph. We integrate multi-hash as the primary node representation, reducing the ID-embedding table size by more than 98 percent while preserving ranking quality. Temporal neighbor sampling is well understood in principle, but existing implementations scan full adjacency lists, which is a non-starter for users with tens of thousands of friends. We implement timestamp-sorted CSR storage with binary search, reducing the per-node temporal sampling cost from $O(deg(v) + k)$ to $O(\\log(deg(v)) + k)$. Beyond these components, we show that this combination scales and yields measurable production impact. On a graph with 194M users and 28B edges, offline ablations isolate each design choice's contribution. In an online A/B test, our system increases friend additions from recommendations by 16 percent and unique friend adders by 11.5 percent over a strong production baseline. We release our framework for distributed training and inference on large temporal graphs.",
+      "published": "2026-08-27T17:41:33Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Token-Level Advertising",
+      "url": "https://arxiv.org/abs/2608.27382v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27382v1",
+      "arxiv_id": "2608.27382",
+      "authors": [
+        "Hanbing Liu",
+        "Bowei Zhang",
+        "Changyuan Yu",
+        "Yinyu Ye",
+        "Qi Qi"
+      ],
+      "categories": [
+        "cs.GT",
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "summary": "Generative AI is transforming how people access information, challenging traditional advertising mechanisms built around predefined slots. Towards generation-native advertising, we propose the Latent Advertiser Mixture Auction (LAMA), a token-level advertising mechanism that embeds advertiser influence directly into the generation process. Advertisers report local continuation values that induce advertiser-specific next-token policies, from which the platform decodes through a latent mixture while updating an allocation posterior. We show that LAMA satisfies Markov DSIC and IR, and achieves near-optimal KL-regularized welfare. We further develop a learning-based implementation that reconstructs the required reports online from learned local advantages and root values. Proof-of-concept experiments on real-world commercial-search query splits show that LAMA improves platform welfare and revenue while maintaining user-facing response quality, providing initial evidence for the feasibility of generation-native advertising.",
+      "published": "2026-08-27T17:18:27Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Universality and sharp thresholds for ellipsoid fitting",
+      "url": "https://arxiv.org/abs/2608.27372v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27372v1",
+      "arxiv_id": "2608.27372",
+      "authors": [
+        "Frederic Koehler",
+        "Youngtak Sohn"
+      ],
+      "categories": [
+        "math.PR",
+        "cond-mat.dis-nn",
+        "cs.DS",
+        "cs.LG",
+        "math.ST"
+      ],
+      "primary_category": "cs.LG",
+      "summary": "We establish a sharp phase transition for fitting random vectors by an ellipsoid. The random vectors have independent subgaussian coordinates with mean zero, variance one, and a common fourth moment, and the number of vectors is proportional to the square of the dimension. We identify an explicit satisfiability threshold such that, with high probability, a positive definite ellipsoid passes through every data point below the threshold, whereas no positive semidefinite fit exists above it. We also determine the optimal squared fitting error throughout the unsatisfiable regime. In particular, the threshold depends on the coordinate distributions only through their common fourth moment, revealing a fourth moment universality phenomenon. For standard Gaussian data the threshold is $1/4$, resolving the ellipsoid fitting conjecture.",
+      "published": "2026-08-27T17:09:38Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Understanding Evolution Strategies for LLM Reasoning: Broader Reasoning Coverage than GRPO",
+      "url": "https://arxiv.org/abs/2608.27351v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27351v1",
+      "arxiv_id": "2608.27351",
+      "authors": [
+        "Yunpeng Ba",
+        "Zhi Zheng",
+        "Yue Xie",
+        "Jiaqing Li",
+        "Xialiang Tong",
+        "Tao Zhong",
+        "Mingxuan Yuan",
+        "Zhichao Lu",
+        "Xuyang Wu",
+        "Zhenkun Wang"
+      ],
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "summary": "Evolution Strategies (ES) have recently emerged as a memory-efficient post-training paradigm for LLM reasoning. However, the optimization behavior of ES remains understudied, making it hard to define its advantage scope compared to mainstream post-training paradigms (e.g., Group Relative Policy Optimization (GRPO)). By systematically investigating ES dynamics and mechanisms, this paper first identifies a performance advantage of ES over GRPO, theoretically and empirically showing that ES can lead to broader reasoning coverage, thereby better exploiting the reasoning capabilities of pretrained LLMs. Theoretically, we show that verifier-projected Jensen-Shannon diversity across the ES population is helpful to higher Pass@K performances. Empirically, unlike GRPO, which exhibits entropy collapse, ES improves Pass@1 while attaining higher Pass@K than GRPO. We further develop a sequential GRPO-ES training strategy that combines GRPO's strength in Pass@1 with ES's gains in Pass@K. Second, we find that despite substantial whole-model parameter drift, the task-performance gains of ES are only contributed to a sparse subset of larger-magnitude updates. This functional sparsity suggests that large parameter movement need not imply widespread functional change, and held-out evaluations further show that it does not necessarily lead to catastrophic forgetting. Finally, we study how hyperparameter design affects the effectiveness of ES, demonstrating that ES requires a smaller population size in a larger LLM. These findings position ES as a distinct reasoning post-training paradigm rather than a less effective, memory-efficient alternative to GRPO.",
+      "published": "2026-08-27T16:48:39Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "A Finite Sample Analysis for Quantile Temporal Difference Learning in Distributional Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2608.27313v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27313v1",
+      "arxiv_id": "2608.27313",
+      "authors": [
+        "Zijie Cheng",
+        "Xiang Li",
+        "Yang Peng",
+        "Zhihua Zhang"
+      ],
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "summary": "We establish a global finite-sample guarantee for synchronous quantile temporal-difference learning (QTD) in tabular distributional reinforcement learning. The proof separates two stability mechanisms. A global comparison argument, based on the order monotonicity of reward cumulative distribution functions and the $W_\\infty$ contraction of the distributional Bellman operator, brings an arbitrarily initialized iterate into a local neighborhood. Inside that neighborhood, we linearize the QTD mean field. Its Jacobian is a nonsingular $M$-matrix, and the associated positive semigroup permits a variance-sensitive martingale analysis. For stepsizes $α_t=c(t+1)^{-a}$ with $a\\in(1/2,1)$, the leading last-iterate fluctuation is of order $\\widetilde O\\bigl(T^{-a/2}/\\sqrt{1-γ}\\bigr)$ and has no polynomial dependence on the number of quantiles. The deterministic transient and the required burn-in can still depend on the smallest Bellman-target density, which is of order $m^{-1}$ in the worst case. The result therefore distinguishes sharply between the local stochastic fluctuation and the global sample complexity.",
+      "published": "2026-08-27T16:16:09Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "QuantumBoostNet: A Hybrid Classical-Quantum Architecture for Enhanced Accuracy in Cardiac Ultrasound View Identification",
+      "url": "https://arxiv.org/abs/2608.27302v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27302v1",
+      "arxiv_id": "2608.27302",
+      "authors": [
+        "Mihai Udrescu-Milosav",
+        "Stefan-Alexandru Jura",
+        "Mihai Udrescu",
+        "Gerhard-Paul Diller"
+      ],
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "summary": "Accurate identification of the correct view or angle in cardiac ultrasound (echocardiogram) is a critical component of cardiologic imaging. This step is essential for precise anatomical interpretation, reliable measurement, and the reduction of clinical errors. Although computer vision has advanced significantly, most state-of-the-art models perform well on standard benchmarks but often yield suboptimal results in specialized medical imaging tasks due to the high level of noise present in the data. QuantumBoostNet, a hybrid classical-quantum architecture, is introduced to address these challenges. This model integrates a classical backbone with two heads: one classical and one quantum, with the quantum head implemented as a parametrized 10-qubit quantum circuit. Training occurs in two stages, with an adaptive transition between heads governed by a mixing parameter that monitors loss dynamics. Extensive experiments indicate that, despite the limited number of qubits that can be simulated, QuantumBoostNet consistently outperforms state-of-the-art classical and hybrid classical-quantum models in cardiac ultrasound view identification, achieving a relative improvement over the best competitor. QuantumBoostNet also demonstrates superior performance on established image classification benchmarks and exhibits robustness to noise. These findings support the continued development of hybrid classical-quantum models for specialized medical imaging applications.",
+      "published": "2026-08-27T16:06:09Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "LLMs Can Design Near-Optimal OR Algorithms",
+      "url": "https://arxiv.org/abs/2608.27296v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27296v1",
+      "arxiv_id": "2608.27296",
+      "authors": [
+        "Jackie Baek"
+      ],
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "summary": "We ask whether large language models (LLMs) can design effective algorithms for well-specified operations research (OR) problems. We study inventory control, queueing network control, and assortment optimization. We evaluate two levels of LLM use: at level 1, the model receives one problem instance and returns a solution for that instance; at level 2, it receives only the problem class description and broad parameter ranges, and returns an algorithm that maps instance parameters to solutions. Human input is minimal: we give one untuned prompt that describes the problem, and the model has access to a Python sandbox tool with a fixed compute budget. The strongest model we test, gpt-5.6-sol, matches or outperforms the best existing method on almost all evaluated instances. This holds even at level 2, where the returned algorithm is fixed before seeing the evaluation instances. Performance also improves sharply across models released less than eight months apart, suggesting that this capability is moving quickly. Thus, for the well-specified operations problems we study, a single untuned LLM query can already produce algorithms competitive with specialized methods. These results suggest that frontier LLMs can be a serious empirical baseline for algorithm design in well-specified OR problems.",
+      "published": "2026-08-27T16:01:11Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Recovering Expert Critic-Sourced Network Adjacency between Musical Artists from Acoustic Distributions: A Construct-Validity Approach",
+      "url": "https://arxiv.org/abs/2608.27291v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27291v1",
+      "arxiv_id": "2608.27291",
+      "authors": [
+        "Elena Badillo-Goicoechea",
+        "Fengfeng He"
+      ],
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "summary": "Music recommendation relies primarily on two signals: user-item interactions, which fail in the cold-start regime, and intrinsic musical content, available for any recording. We argue that a third, largely untapped signal is both richer and more principled: critical adjacency, the pairwise relation established when an expert critic explicitly links two artists in long-form prose. It encodes deliberate judgments about which artists belong together. Prior work established its internal validity, showing it recovers coherent, interpretable communities and can match collaborative filtering in user-satisfaction simulations, with no user data. What has been missing is external validation: whether this critic-sourced relation is grounded in the music itself versus sociological context. We test it against acoustic content, reframing the question as one of construct validity. Representing artists as empirical distributions over 80 low-level Essentia acoustic descriptors and modeling pairwise proximity via marginal optimal-transport (Wasserstein) distances, we evaluate how far critical adjacency is sonically recoverable under a cold-start, artist-disjoint split. Our ensemble recovers these edges at out-of-sample AUC of 0.767 (95% CI 0.761-0.775). Recoverability rises monotonically with critical consensus, reaching 0.865 on multi-source attested edges. Stratified evaluations align with sociological models of genre: tightly bounded, scene-based genres show higher recoverability than broad industry umbrella terms. Critical discourse is thus a rich source of information for recommendation, decomposing into a reproducible \"sonic core\" and a \"sociological remainder\" driven by narrative positioning, subcultural context, and canonical placement. The work offers both a scalable cold-start discovery mechanism and a sociologically grounded approach to MIR and MRS research.",
+      "published": "2026-08-27T15:59:21Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "MM-Spectrum: Multimodal Multi-spectral Molecular Structural Elucidation with a Stable MoE Framework",
+      "url": "https://arxiv.org/abs/2608.27286v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27286v1",
+      "arxiv_id": "2608.27286",
+      "authors": [
+        "Hai-tao Yu",
+        "Nan Min",
+        "Zheng Fang",
+        "Hongyu Zhan",
+        "Yusen Tan",
+        "Yuhan Wang",
+        "Jun Xia"
+      ],
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "summary": "Inferring molecular structures from multimodal spectroscopic measurements requires integrating complementary yet highly heterogeneous signals. However, the common paradigm of directly concatenating multispectral sequences can exhibit anomalous performance degradation, primarily due to pronounced heterogeneity and the resulting multimodal imbalance across modalities. As a remedy, we propose MM-Spectrum, a sparse Mixture-of-Experts framework tailored for multimodal multispectral spectra-to-structure elucidation. To better match the information characteristics under multispectral imbalance, MM-Spectrum introduces an explicit modality-aware routing mechanism that exposes spectral identity to the router in addition to token content representations. Moreover, it incorporates shared and interaction experts, together with heterogeneous expert capacities, to extract multispectral modality-unique and cross-modal synergistic information while suppressing noise-induced interference. Across full-modality, bimodal, and missing-modality settings on molecular structural elucidation, MM-Spectrum achieves consistent and substantial improvements, supported by ablation studies and interpretability analyses.",
+      "published": "2026-08-27T15:55:30Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Making Latent Evolution Explicit: Operator-Structured Transitions for World Action Models",
+      "url": "https://arxiv.org/abs/2608.27259v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27259v1",
+      "arxiv_id": "2608.27259",
+      "authors": [
+        "Xiaoxiao Lu",
+        "Yunlong Dong",
+        "Jiahao Shi",
+        "Ye Yuan"
+      ],
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "summary": "World Action Models (WAMs) augment robot policies by predicting how task-relevant scene states may evolve under interaction. Recent WAMs increasingly perform such prediction in latent representation spaces, avoiding full appearance-level generation while preserving control-relevant information. Yet latent transitions are commonly realized with Transformer-based predictors whose inductive structure is centered on token interaction rather than temporal evolution. We study transition realization as an architectural choice distinct from predictive representation and prediction-policy coupling. We introduce the Latent Evolution Operator Network (LEON), which models latent evolution in a learned observable space through context-modulated operator-based propagation and additive forcing. Grounded in the controlled Koopman generator view of evolution, LEON organizes context-dependent transition variation around a shared evolution-operator structure while retaining a complementary path for additive change. Controlled dynamical systems verify the resulting evolution-specific inductive bias and the complementary roles of operator propagation and forcing. Across two WAM formulations that integrate latent prediction into the policy differently, LEON improves closed-loop performance and robustness while remaining effective under full transition replacement. These results establish transition realization as a consequential architectural choice in latent WAMs.",
+      "published": "2026-08-27T15:43:44Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Enforcing Dirichlet Boundary Conditions in Operator Learning",
+      "url": "https://arxiv.org/abs/2608.27256v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27256v1",
+      "arxiv_id": "2608.27256",
+      "authors": [
+        "Andrew M. Stuart",
+        "Margaret Trautner"
+      ],
+      "categories": [
+        "math.NA",
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "summary": "Operator learning in scientific machine learning is concerned with approximation of maps between infinite-dimensional function spaces; such maps frequently arise as the solution operators of partial differential equations (PDEs). Neural operators have demonstrated broad empirical success at approximating such maps from data. However, most existing neural operator architectures enforce boundary conditions indirectly through training from data even though the boundary condition is often known exactly. Furthermore, existing modifications and approaches that do enforce boundary conditions explicitly suffer from impractical restrictions, including boundary smoothness, uniform grids, and separable, box-like domains. In this work, we propose an architecture which, independently of training, satisfies homogeneous Dirichlet boundary conditions, whilst simultaneously retaining the expressivity of existing kernel-integral neural operator architectures. This is achieved by enforcing the property that the output of each layer is contained in the span of a subset of the homogeneous Dirichlet eigenfunctions of the Laplacian on the output domain. The method requires only that the output domain be bounded with Lipschitz boundary and places no restriction on the choice of discretization, making it applicable to arbitrary mesh data and general geometries. We prove universal approximation for the resulting architecture; furthermore the approach we adopt in the analysis proves universality for a broad class of kernel-integral neural operators thereby uniting existing theory for a variety of operator learning methods. We validate the proposed method on maps defined by the coefficient to solution map in 2D PDEs: Darcy flow on a square domain and the Helmholtz equation on a circular domain. Comparisons are made with alternative methods.",
+      "published": "2026-08-27T15:40:29Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Circuit Condensation: Post-Training that Concentrates a Behavior's Causal Circuit",
+      "url": "https://arxiv.org/abs/2608.27254v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27254v1",
+      "arxiv_id": "2608.27254",
+      "authors": [
+        "Sai Adith Senthil Kumar"
+      ],
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "summary": "One approach to mechanistic interpretability explains behavior through circuits: the components and connections that carry it. Frozen discovery often returns hundreds of edges, making them hard to inspect, compare, or verify exhaustively. We introduce Circuit Condensation, which post-trains models to concentrate behaviors into smaller causal graphs. Each round prunes low-attribution edges and trains a low-rank adapter to match the original through what remains, retaining the cut only if task performance and general capability survive. Across four behaviors and eight models, condensed circuits are smaller than the strongest frozen baseline in 30 of 32 settings, by $8.1\\times$ on average and up to $316\\times$. Repeating the search without weight updates produces larger circuits in 29 of 32 settings, showing that weight updates, rather than search alone, drive the reduction. Testing every subset of 19 circuits finds 11 that cannot be reduced and reveals removable edges in the rest. Pair ablations expose dependencies between edges, showing that their effects cannot be understood independently. On indirect object identification, condensation isolates 24 heads, 17 of them with documented roles, against 61 heads and 36 undocumented ones for the matched frozen circuit: a sufficient sub-circuit of the published mechanism rather than a reconstruction of it. The resulting circuit tracks the original model's next-token distribution and predicts its errors.",
+      "published": "2026-08-27T15:38:58Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "Importance Scoring of Transformer Attention Heads in Learning Tabular Data",
+      "url": "https://arxiv.org/abs/2608.27241v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27241v1",
+      "arxiv_id": "2608.27241",
+      "authors": [
+        "Ahmad Jad Allah",
+        "Kazi F. Akhter",
+        "Md. Kamrozzaman Bhuiyan",
+        "Manar D. Samad"
+      ],
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "summary": "Computationally demanding and opaque deep learning models can be better understood and optimized by analyzing how they transform data. While deep transformers have been widely studied in computer vision and natural language processing, their application in tabular data remains relatively underexplored. This paper presents one of the first applications of an importance-scoring metric to interpret multi-head transformer models in learning from tabular data. Experiments conducted on 40 diverse tabular datasets demonstrate robustness to head drops based on the proposed head importance score. In 72.5\\% of experimental examples, the model remains most resilient to performance drops when heads with the lowest importance scores are gradually removed. In contrast, removing the most important attention head first results in the greatest reduction in classification performance. A closer look at individual head importance scores across six attention layers reveals that important heads are scattered across layers, with no consistent layer-specific trends. In contrast to the image and language domains, the importance of individual attention heads varies considerably across tabular datasets with different schemas and feature spaces. The proposed importance score can improve efficiency and redundancy within transformer architectures. We make the source code for measuring the importance of individual attention heads publicly available.",
+      "published": "2026-08-27T15:22:37Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "A Point-of-Prescription Safety-Check System for Adverse Drug Reactions in Rural Bangladeshi Hospitals: A Feasibility Study",
+      "url": "https://arxiv.org/abs/2608.27239v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27239v1",
+      "arxiv_id": "2608.27239",
+      "authors": [
+        "Shahir Abdullah"
+      ],
+      "categories": [
+        "cs.HC",
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "summary": "Adverse drug reactions (ADRs) are a major, largely preventable source of patient harm. In high-income settings, electronic health records store a patient's allergy history and warn prescribers when a contraindicated drug is ordered; in rural Bangladeshi public hospitals no such record exists for outgoing patients, a single physician may see on the order of one patient per minute, and a patient's history of severe reactions does not survive between visits. This paper proposes and outlines the evaluation of a lightweight, smartphone-based safety-check system for this setting. At registration a soft identifier (a phone number) is recorded; after the physician writes a prescription, its image is captured, the brand names are resolved to active ingredients using national drug references, and the ingredients are matched against the patient's recorded severe reaction history. The system is retrieval-based rather than predictive, and is silent by default, raising a flag only for high-risk matches a design grounded in the alert-fatigue literature. We frame the work as a feasibility study: we describe the proposed framework and an evaluation plan measuring workflow fit under high volume, usability, identity-resolution reliability, and retrospective detection of known reaction cases. We explicitly do not claim a clinical-outcome effect, which the low base rate of severe events places beyond a single-site feasibility study.",
+      "published": "2026-08-27T15:21:51Z"
+    },
+    {
+      "source": "arxiv",
+      "type": "paper",
+      "title": "HALO: A Heterogeneity-Aware Language-Aligned IMU Foundation Model for Open-Set Human Activity Recognition",
+      "url": "https://arxiv.org/abs/2608.27233v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27233v1",
+      "arxiv_id": "2608.27233",
+      "authors": [
+        "Zihan Ding",
+        "Liyu Zhang",
+        "Xiaomin Ouyang"
+      ],
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "summary": "Human Activity Recognition (HAR) using inertial measurement units (IMUs) enables a wide range of applications, yet the field still lacks a unified model that can generalize across diverse subjects, devices, and activities. Training such a model is difficult due to two key challenges: sensing heterogeneity -- differences in sampling rates, channel configurations, and sensor placements -- and poor generalization to unseen activities and label vocabularies. We introduce HALO (Heterogeneity-Aware Language-aligned Open-set model), a domain-specific IMU foundation model that addresses both challenges through a two-stage training framework. Stage 1 pretrains the IMU encoder with heterogeneity-aware self-supervised learning, including adaptive-pooling tokenization, channel-independent feature extraction, and contextualized sensor conditioning that injects natural-language sensor descriptions into each channel embedding. Stage 2 aligns this IMU encoder with text embeddings via synonym-aware soft contrastive learning, enabling open-set recognition via cosine-similarity retrieval without per-dataset classifiers. Trained on 10 public HAR datasets and evaluated on 7 held-out datasets, HALO outperforms five state-of-the-art baselines on all 8 aggregate metrics, and still leads on 3 of 4 settings under baseline-matched inputs. Despite using only ~35M trainable parameters -- 10x fewer than the latest foundation model MOMENT (341.2M) -- HALO improves zero-shot open-set accuracy, measured over all 87 training labels, by 13.7 percentage points. On two further datasets with severe distribution shift, every model including HALO collapses zero-shot. A video demonstration of HALO's performance in real world is available at https://youtu.be/rooVKragtFU",
+      "published": "2026-08-27T15:17:12Z"
+    }
+  ],
+  "news": [
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Nvidia agrees to acquire Hugging Face for $13B",
+      "url": "https://www.businessinsider.com/nvidia-in-talks-to-buy-hugging-face-13-billion-dollars-2026-8",
+      "hn_url": "https://news.ycombinator.com/item?id=49458161",
+      "score": 1885,
+      "comments": 870,
+      "author": "mfiguiere",
+      "time": 1787793175
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Apple introduces M6 and M5 Ultra",
+      "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
+      "hn_url": "https://news.ycombinator.com/item?id=49433292",
+      "score": 1303,
+      "comments": 1285,
+      "author": "interpol_p",
+      "time": 1787662882
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "GLM-5.3-Flash",
+      "url": "https://z.ai/blog/glm-5.3-flash",
+      "hn_url": "https://news.ycombinator.com/item?id=49449507",
+      "score": 1111,
+      "comments": 558,
+      "author": "Philpax",
+      "time": 1787753330
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "CEO fired developers to make room for AI. Developers create open source AI CEO",
+      "url": "https://github.com/SenteLabsAI/OpenExecutive",
+      "hn_url": "https://news.ycombinator.com/item?id=49458418",
+      "score": 967,
+      "comments": 666,
+      "author": "GrumpySciGuy",
+      "time": 1787795182
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Qwen3.8-Flash-Next",
+      "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+      "hn_url": "https://news.ycombinator.com/item?id=49448210",
+      "score": 693,
+      "comments": 232,
+      "author": "tosh",
+      "time": 1787748732
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Tailcat – Like netcat, but over Tailscale’s data plane",
+      "url": "https://github.com/tailscale/tailcat",
+      "hn_url": "https://news.ycombinator.com/item?id=49452990",
+      "score": 651,
+      "comments": 124,
+      "author": "nderjung",
+      "time": 1787766142
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "507 Mechanical Movements",
+      "url": "https://507movements.com/",
+      "hn_url": "https://news.ycombinator.com/item?id=49465169",
+      "score": 563,
+      "comments": 72,
+      "author": "helloplanets",
+      "time": 1787839698
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "RAG Is Simpler Than You Think",
+      "url": "https://www.lighthousenewsletter.com/p/rag-is-simpler-than-you-think",
+      "hn_url": "https://news.ycombinator.com/item?id=49445727",
+      "score": 493,
+      "comments": 204,
+      "author": "j0selit0",
+      "time": 1787733557
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "An ongoing 3D-printer AGPL violation",
+      "url": "https://lwn.net/SubscriberLink/1089390/46116614cc74b814/",
+      "hn_url": "https://news.ycombinator.com/item?id=49452980",
+      "score": 479,
+      "comments": 220,
+      "author": "Velocifyer",
+      "time": 1787766100
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Show HN: The load-bearing vocabulary of Claude",
+      "url": "https://louisabraham.github.io/load-bearing/",
+      "hn_url": "https://news.ycombinator.com/item?id=49461817",
+      "score": 476,
+      "comments": 232,
+      "author": "Labo333",
+      "time": 1787821189
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "The turbulent AI era is here",
+      "url": "https://www.gatesnotes.com/a-turbulent-ai-era-and-critical-choices-to-make",
+      "hn_url": "https://news.ycombinator.com/item?id=49447057",
+      "score": 281,
+      "comments": 530,
+      "author": "nanna",
+      "time": 1787743434
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Gemini-3.5-Transcribe",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/",
+      "hn_url": "https://news.ycombinator.com/item?id=49468818",
+      "score": 260,
+      "comments": 83,
+      "author": "k9294",
+      "time": 1787853822
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "It’s so hard to finish an idea that is not yours and is just suggested by AI",
+      "url": "https://www.ssp.sh/brain/using-obsidian-with-ai/",
+      "hn_url": "https://news.ycombinator.com/item?id=49450898",
+      "score": 252,
+      "comments": 174,
+      "author": "zazuke",
+      "time": 1787758205
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Judge Rules Trump Administration’s Blacklisting of Anthropic Was Illegal",
+      "url": "https://www.nytimes.com/2026/08/27/technology/anthropic-government-blacklisting-ruling.html",
+      "hn_url": "https://news.ycombinator.com/item?id=49473522",
+      "score": 241,
+      "comments": 107,
+      "author": "jbegley",
+      "time": 1787882618
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Gemini Omni 1.1 Flash",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/",
+      "hn_url": "https://news.ycombinator.com/item?id=49467922",
+      "score": 238,
+      "comments": 165,
+      "author": "saretup",
+      "time": 1787850392
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "VMs won't contain cyber-capable agents",
+      "url": "https://blog.trailofbits.com/2026/08/26/vms-wont-contain-cyber-capable-agents/",
+      "hn_url": "https://news.ycombinator.com/item?id=49450188",
+      "score": 180,
+      "comments": 138,
+      "author": "polyrand",
+      "time": 1787755770
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Two German airport workers die of malaria after 'mosquito arrives on plane'",
+      "url": "https://www.bbc.com/news/articles/cz6zwgg9y8go",
+      "hn_url": "https://news.ycombinator.com/item?id=49468315",
+      "score": 179,
+      "comments": 98,
+      "author": "vinni2",
+      "time": 1787851993
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Show HN: We built open OpenRouter that turns usage into a better model",
+      "url": "https://github.com/experientiallabs/experiential",
+      "hn_url": "https://news.ycombinator.com/item?id=49471407",
+      "score": 168,
+      "comments": 31,
+      "author": "SilenN",
+      "time": 1787865515
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Please stop flooding our projects with AI slop to furnish your CV",
+      "url": "https://neilalexander.dev/2026/06/30/flooding-contributions",
+      "hn_url": "https://news.ycombinator.com/item?id=49474143",
+      "score": 157,
+      "comments": 107,
+      "author": "signa11",
+      "time": 1787888973
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "PageRank explained",
+      "url": "https://praveshkoirala.com/2026/08/26/you-could-have-invented-pagerank/",
+      "hn_url": "https://news.ycombinator.com/item?id=49449888",
+      "score": 144,
+      "comments": 93,
+      "author": "pkoird",
+      "time": 1787754545
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Stripe said to abandon $50B pursuit of PayPal",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-28/advent-stripe-consortium-is-said-to-drop-pursuit-of-paypal",
+      "hn_url": "https://news.ycombinator.com/item?id=49473483",
+      "score": 129,
+      "comments": 148,
+      "author": "1986",
+      "time": 1787882246
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "MIT's Ad Hoc Committee on AI Use in Teaching, Learning, and Research Training",
+      "url": "https://aiandeducation.mit.edu/report/",
+      "hn_url": "https://news.ycombinator.com/item?id=49464314",
+      "score": 128,
+      "comments": 75,
+      "author": "pbui",
+      "time": 1787836065
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Show HN: Voronoi Go",
+      "url": "https://voronoigo.com/",
+      "hn_url": "https://news.ycombinator.com/item?id=49468816",
+      "score": 126,
+      "comments": 17,
+      "author": "igpay",
+      "time": 1787853817
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Harness Engineering",
+      "url": "https://Habitat-Thinking.github.io/ai-literacy-superpowers/plugins/ai-literacy-superpowers/explanation/harness-engineering/",
+      "hn_url": "https://news.ycombinator.com/item?id=49464970",
+      "score": 120,
+      "comments": 42,
+      "author": "tomrod",
+      "time": 1787838897
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "$900M paid out to end wind farm project going to firm run by Mar-a-Lago neighbor",
+      "url": "https://www.independent.co.uk/news/world/americas/us-politics/trump-windfarm-money-neighbors-florida-b3040628.html",
+      "hn_url": "https://news.ycombinator.com/item?id=49470996",
+      "score": 119,
+      "comments": 25,
+      "author": "pseudolus",
+      "time": 1787863492
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Previewing the Model Hardware Standard",
+      "url": "https://www.anthropic.com/news/model-hardware-standard-research-preview",
+      "hn_url": "https://news.ycombinator.com/item?id=49468834",
+      "score": 111,
+      "comments": 42,
+      "author": "surprisetalk",
+      "time": 1787853890
+    },
+    {
+      "source": "hackernews",
+      "type": "news",
+      "title": "Humanity has the debate about AI consciousness backwards",
+      "url": "https://economist.com/by-invitation/2026/08/20/humanity-has-the-debate-about-ai-consciousness-backwards",
+      "hn_url": "https://news.ycombinator.com/item?id=49458875",
+      "score": 100,
+      "comments": 314,
+      "author": "semiquaver",
+      "time": 1787798227
+    }
+  ],
+  "projects": [
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Ftt-a1i%2Farchify\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1211139949,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Ftt-a1i%2Farchify\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1211139949,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
+      "language": "JavaScript",
+      "stars_today": 4239,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Ffreestylefly%2Fawesome-gpt-image-2\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1220744720,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Ffreestylefly%2Fawesome-gpt-image-2\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1220744720,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+      "language": "JavaScript",
+      "stars_today": 2096,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fbilawalsidhu%2Fgods-eye-view\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1277471539,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fbilawalsidhu%2Fgods-eye-view\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1277471539,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "language": "JavaScript",
+      "stars_today": 1984,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "sponsors/DietrichGebert",
+      "url": "https://github.com/sponsors/DietrichGebert",
+      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "language": "JavaScript",
+      "stars_today": 1613,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "sponsors/calesthio",
+      "url": "https://github.com/sponsors/calesthio",
+      "description": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
+      "language": "Python",
+      "stars_today": 1292,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "sponsors/MadsLorentzen",
+      "url": "https://github.com/sponsors/MadsLorentzen",
+      "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+      "language": "Python",
+      "stars_today": 1013,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2FAgriciDaniel%2Fclaude-obsidian\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1203670949,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2FAgriciDaniel%2Fclaude-obsidian\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1203670949,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Self-organizing AI second brain for Obsidian + Claude Code. Drop any source and Claude reads, links, and files it into one connected knowledge graph of plain Markdown you own. AI note-taking, personal knowledge management (PKM), and an open-source Notion alternative. Based on Karpathy's LLM Wiki pattern.",
+      "language": "Python",
+      "stars_today": 634,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2FAgriciDaniel%2Fclaude-obsidian\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1203670949,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2FAgriciDaniel%2Fclaude-obsidian\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1203670949,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Self-organizing AI second brain for Obsidian + Claude Code. Drop any source and Claude reads, links, and files it into one connected knowledge graph of plain Markdown you own. AI note-taking, personal knowledge management (PKM), and an open-source Notion alternative. Based on Karpathy's LLM Wiki pattern.",
+      "language": "Python",
+      "stars_today": 634,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2FK-Dense-AI%2Fscientific-agent-skills\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1079456184,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2FK-Dense-AI%2Fscientific-agent-skills\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1079456184,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 175,000+ scientists worldwide. 163 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+      "language": "Python",
+      "stars_today": 498,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2FK-Dense-AI%2Fscientific-agent-skills\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1079456184,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2FK-Dense-AI%2Fscientific-agent-skills\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1079456184,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 175,000+ scientists worldwide. 163 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+      "language": "Python",
+      "stars_today": 498,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2FConardLi%2Fgarden-skills\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1216954187,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2FConardLi%2Fgarden-skills\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1216954187,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "ConardLi's open-source Skills collection, featuring web design, knowledge retrieval, image generation, and more.",
+      "language": "CSS",
+      "stars_today": 415,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2FJetBrains%2Fgo-modern-guidelines\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1103108740,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2FJetBrains%2Fgo-modern-guidelines\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1103108740,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Help AI coding agents write modern Go",
+      "language": "Go",
+      "stars_today": 300,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fanthropics%2Fclaude-plugins-official\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1100776768,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fanthropics%2Fclaude-plugins-official\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1100776768,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+      "language": "Python",
+      "stars_today": 292,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fanthropics%2Fclaude-plugins-official\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1100776768,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fanthropics%2Fclaude-plugins-official\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1100776768,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+      "language": "Python",
+      "stars_today": 292,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fanthropics%2Fskills\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1061953414,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fanthropics%2Fskills\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1061953414,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Public repository for Agent Skills",
+      "language": "Python",
+      "stars_today": 274,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fmarin-community%2Fmarin\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:775839592,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fmarin-community%2Fmarin\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:775839592,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Open-source framework for the research and development of foundation models.",
+      "language": "Python",
+      "stars_today": 255,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fmarin-community%2Fmarin\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:775839592,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fmarin-community%2Fmarin\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:775839592,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Open-source framework for the research and development of foundation models.",
+      "language": "Python",
+      "stars_today": 255,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2FAgriciDaniel%2Fclaude-seo\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1152014594,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2FAgriciDaniel%2Fclaude-seo\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1152014594,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Universal SEO skill for Claude Code. 25 sub-skills + 18 sub-agents covering technical SEO, E-E-A-T, schema, GEO/AEO, backlinks, local SEO, maps intelligence, semantic clustering, e-commerce SEO, international SEO, Google APIs, and PDF/Excel reporting. Optional DataForSEO, Firecrawl, and Banana extensions.",
+      "language": "Python",
+      "stars_today": 245,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2FTauricResearch%2FTradingAgents\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:909213664,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2FTauricResearch%2FTradingAgents\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:909213664,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+      "language": "Python",
+      "stars_today": 229,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2FTauricResearch%2FTradingAgents\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:909213664,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2FTauricResearch%2FTradingAgents\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:909213664,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+      "language": "Python",
+      "stars_today": 229,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2FZhuLinsen%2Fdaily_stock_analysis\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1131513930,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2FZhuLinsen%2Fdaily_stock_analysis\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1131513930,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+      "language": "Python",
+      "stars_today": 148,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "sponsors/thedotmack",
+      "url": "https://github.com/sponsors/thedotmack",
+      "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+      "language": "JavaScript",
+      "stars_today": 143,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fhtdt%2Fgodogen\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1151667698,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fhtdt%2Fgodogen\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1151667698,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Autonomous game development for Godot, Bevy, and Babylon.js with Claude Code and Codex",
+      "language": "Python",
+      "stars_today": 131,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2FComposioHQ%2Fawesome-claude-skills\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1078079172,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2FComposioHQ%2Fawesome-claude-skills\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1078079172,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
+      "language": "Python",
+      "stars_today": 130,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2FComposioHQ%2Fawesome-claude-skills\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1078079172,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2FComposioHQ%2Fawesome-claude-skills\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1078079172,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
+      "language": "Python",
+      "stars_today": 130,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "sponsors/open-webui",
+      "url": "https://github.com/sponsors/open-webui",
+      "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "language": "Python",
+      "stars_today": 128,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Flangchain-ai%2Fdeepagents\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1027384981,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Flangchain-ai%2Fdeepagents\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1027384981,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "The batteries-included agent harness.",
+      "language": "Python",
+      "stars_today": 65,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fhome-assistant%2Fcore\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:12888993,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fhome-assistant%2Fcore\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:12888993,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "🏡 Open source home automation that puts local control and privacy first.",
+      "language": "Python",
+      "stars_today": 34,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2FRVC-Boss%2FGPT-SoVITS\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:743230067,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2FRVC-Boss%2FGPT-SoVITS\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:743230067,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "1 min voice data can also be used to train a good TTS model! (few shot voice cloning)",
+      "language": "Python",
+      "stars_today": 24,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fpytorch%2Fpytorch\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:65600975,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fpytorch%2Fpytorch\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:65600975,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
+      "language": "Python",
+      "stars_today": 23,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2FNVIDIA%2FMegatron-LM\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:176982014,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2FNVIDIA%2FMegatron-LM\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:176982014,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Ongoing research training transformer models at scale",
+      "language": "Python",
+      "stars_today": 18,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fandrewyng%2Faisuite\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:822285449,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fandrewyng%2Faisuite\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:822285449,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Simple, unified interface to multiple Generative AI providers",
+      "language": "Python",
+      "stars_today": 10,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fyashmulgaonkar%2FFlightScnr_Pi\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1263634307,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fyashmulgaonkar%2FFlightScnr_Pi\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:1263634307,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending/python?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Desktop flight and marine radar: a real-time aircraft and marine vessel tracker powered by a Raspberry Pi and 4\" round screen.",
+      "language": "Python",
+      "stars_today": 9,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Fgoogle%2Fgoogletest\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:39840932,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Fgoogle%2Fgoogletest\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:39840932,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "GoogleTest - Google Testing and Mocking Framework",
+      "language": "C++",
+      "stars_today": 9,
+      "total_stars": 0
+    },
+    {
+      "source": "github_trending",
+      "type": "project",
+      "title": "login?return_to=%2Factions%2Fcheckout\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:197814629,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "url": "https://github.com/login?return_to=%2Factions%2Fcheckout\" rel=\"nofollow\" data-hydro-click=\"{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:197814629,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/trending?since=daily&quot;,&quot;user_id&quot;:null}}",
+      "description": "Action for checking out a repo",
+      "language": "TypeScript",
+      "stars_today": 8,
+      "total_stars": 0
+    }
+  ]
+}
